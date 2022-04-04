@@ -20,7 +20,7 @@ class MyDocument extends Document {
                     <meta name="msapplication-TileColor" content="#000000"/>
                     <meta name="theme-color" content="#ffffff"/>
                 </Head>
-                <body>
+                <body className='antialiased font-sans py-4 sm:min-h-screen tracking-tighter bg-gray-900 text-white flex justify-center items-center'>
                     <Main />
                     <NextScript />
                 </body>
