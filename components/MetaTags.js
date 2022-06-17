@@ -1,8 +1,10 @@
+import Head from 'next/head'
 import React from 'react';
 
 export default function MetaTags({ title, description, url, image = '' }) {
     return (
-        <>
+        <Head>
+            <title>{title}</title>
             <link rel="canonical" href={url} />
             <meta name="title" content={title} />
             <meta name="description" content={description} />
@@ -18,6 +20,6 @@ export default function MetaTags({ title, description, url, image = '' }) {
             <meta property="twitter:title" content={title} />
             <meta property="twitter:description" content={description} />
             <meta property="twitter:image" content={image} />
-        </>
+        </Head>
     );
 }
