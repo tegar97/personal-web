@@ -5,7 +5,7 @@ export default function Article({ article }) {
     return (
         <div className="flex lg:gap-x-6">
             <div className="w-2/12 hidden lg:block">
-                <span className="text-slate-400 block -mt-0.5 text-right text-sm font-medium">
+                <span className="text-slate-400 block -mt-1.5 text-right pr-4 text-sm font-medium">
                     {article.created}
                 </span>
             </div>
@@ -32,7 +32,7 @@ export default function Article({ article }) {
             <div className="w-11/12">
                 <Link
                     href={`/articles/${article.slug}`}
-                    className="hover:bg-slate-800 mb-12 group lg:p-4 lg:mt-[-17px] block rounded-lg border-t border-transparent hover:border-slate-700 hover:shadow-lg"
+                    className="hover:bg-slate-800 mb-12 group lg:p-4 lg:-mt-[22px] block rounded-lg border-t border-transparent hover:border-slate-700 hover:shadow-lg"
                 >
                     <span className="text-slate-400 block lg:hidden -mt-0.5 text-xs font-medium">
                         {article.created}
