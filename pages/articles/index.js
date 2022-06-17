@@ -3,10 +3,16 @@ import Article from '@/components/Article';
 import Container from '@/components/Container';
 import AppLayout from '@/components/Layouts/AppLayout';
 import Link from '../../components/Link';
+import MetaTags from '../../components/MetaTags'
 
 export default function Index({ articles }) {
     return (
         <div className="p-5 lg:p-10">
+            <MetaTags
+                title="Irsyad Notes: Articles"
+                description="You can see and read all my writings below."
+                url='https://irsyadnotes.com/articles'
+            />
             <Container>
                 <Link
                     className="group mb-4 flex font-semibold text-sm leading-6 text-slate-200 hover:text-white"
