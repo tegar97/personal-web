@@ -1,22 +1,20 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import React from 'react';
 import Container from '@/components/Container';
-import Link from '@/components/Link'
-import MetaTags from '@/components/MetaTags'
-import Prose from '@/components/Prose'
+import Link from '@/components/Link';
+import MetaTags from '@/components/MetaTags';
+import Prose from '@/components/Prose';
 
 export default function Show({ article }) {
     return (
         <div>
-            <Head>
-                <link rel="stylesheet" href="/gh-dimmed.css"/>
-                <MetaTags
+            <link rel="stylesheet" href="/gh-dimmed.css" />
+            <MetaTags
                 title={article.title}
                 description={article.teaser}
                 image={article.picture}
                 url={`https://irsyadnotes.com/articles/${article.slug}`}
-                />
-            </Head>
+            />
             <Link
                 className="group pl-5 pt-5 flex font-semibold text-sm leading-6 text-slate-200 hover:text-white"
                 href="/articles"
@@ -40,10 +38,11 @@ export default function Show({ article }) {
                 <Container>
                     {/* <Image className='rounded-lg' width={1280} height={720} src={article.picture}/> */}
                     <div className="max-w-3xl mx-auto">
+                        <span className="text-sm text-gray-400 -mb-6 block">{article.created}</span>
                         <h1 className="text-3xl lg:text-5xl text-white mb-4 lg:my-8 tracking-tight font-bold">
                             {article.title}
                         </h1>
-                        <Prose children={article.body}/>
+                        <Prose children={article.body} />
                         {/* <div
                             className="prose max-w-none prose-invert"
                             dangerouslySetInnerHTML={{ __html: article.body }}

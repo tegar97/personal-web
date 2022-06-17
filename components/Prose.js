@@ -7,6 +7,6 @@ marked.setOptions({
 
 export default function Prose({ children }) {
     return (
-        <div className='prose prose-invert' dangerouslySetInnerHTML={{ __html: marked(children) }}/>
+        <div className='prose prose-invert max-w-none' dangerouslySetInnerHTML={{ __html: marked(children) }}/>
     );
 }
