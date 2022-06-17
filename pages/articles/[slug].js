@@ -1,14 +1,15 @@
 import Head from 'next/head'
 import React from 'react';
-import Container from '../../components/Container';
-import Link from '../../components/Link'
-import MetaTags from '../../components/MetaTags'
+import Container from '@/components/Container';
+import Link from '@/components/Link'
+import MetaTags from '@/components/MetaTags'
+import Prose from '@/components/Prose'
 
 export default function Show({ article }) {
     return (
         <div>
             <Head>
-                <title>{article.title}</title>
+                <link rel="stylesheet" href="/gh-dimmed.css"/>
                 <MetaTags
                 title={article.title}
                 description={article.teaser}
@@ -42,10 +43,11 @@ export default function Show({ article }) {
                         <h1 className="text-3xl lg:text-5xl text-white mb-4 lg:my-8 tracking-tight font-bold">
                             {article.title}
                         </h1>
-                        <div
+                        <Prose children={article.body}/>
+                        {/* <div
                             className="prose max-w-none prose-invert"
                             dangerouslySetInnerHTML={{ __html: article.body }}
-                        />
+                        /> */}
                     </div>
                 </Container>
             </div>
