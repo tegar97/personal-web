@@ -38,7 +38,7 @@ export default function Show({ article }) {
                 <Container>
                     {/* <Image className='rounded-lg' width={1280} height={720} src={article.picture}/> */}
                     <div className="max-w-3xl mx-auto">
-                        <span className="text-sm text-gray-400 -mb-6 block">{article.created}</span>
+                        <span className="text-sm text-gray-400 lg:w-mb-6 block">{article.created}</span>
                         <h1 className="text-3xl lg:text-5xl text-white mb-4 lg:my-8 tracking-tight font-bold">
                             {article.title}
                         </h1>
