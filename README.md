@@ -1,1 +1,1 @@
-IRSYADNOTES.COM dijalankan dengan Next.js & artikel-artikel yang ada di parsinta yang ditulis oleh Irsyad A. Panjaitan.
+irsyadnotes.com is run with next js & articles on parsinta written by Irsyad A. Panjaitan.
