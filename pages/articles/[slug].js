@@ -61,11 +61,11 @@ export async function getStaticPaths() {
         params: { slug: article.slug },
     }));
 
-    return { paths, fallback: false, revalidate: 1200 };
+    return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
     const res = await fetch(`https://parsinta.com/api/articles/${params.slug}`);
     const article = await res.json();
-    return { props: { article } };
+    return { props: { article }, revalidate: 1200 };
 }
