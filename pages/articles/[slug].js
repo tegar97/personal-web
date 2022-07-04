@@ -61,7 +61,7 @@ export async function getStaticPaths() {
         params: { slug: article.slug },
     }));
 
-    return { paths, fallback: false };
+    return { paths, fallback: false, revalidate: 1200 };
 }
 
 export async function getStaticProps({ params }) {
