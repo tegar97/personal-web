@@ -53,19 +53,10 @@ export default function Show({ article }) {
         </div>
     );
 }
-export async function getStaticPaths() {
-    // Call an external API endpoint to get articles
-    const res = await fetch('https://parsinta.com/api/articles');
-    const articles = await res.json();
-    const paths = articles.map((article) => ({
-        params: { slug: article.slug },
-    }));
 
-    return { paths, fallback: false };
-}
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
     const res = await fetch(`https://parsinta.com/api/articles/${params.slug}`);
     const article = await res.json();
-    return { props: { article }, revalidate: 1200 };
+    return { props: { article } };
 }
