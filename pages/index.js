@@ -66,6 +66,12 @@ export default function Home() {
                         <Link href='/articles' className='border-t border-slate-700 bg-slate-800 shadow rounded-lg text-slate-50 font-semibold uppercase text-xs px-6 py-3 hover:shadow-none'>
                             Instagram
                         </Link> */}
+                        <a
+                            href="https://parsinta.com/ebooks"
+                            className="border-t border-slate-700 bg-slate-800 shadow rounded-lg text-slate-50 font-semibold uppercase text-xs px-6 py-3 hover:shadow-none"
+                        >
+                            My Ebooks
+                        </a>
                         <Link
                             href="/articles"
                             className="border-t border-slate-700 bg-slate-800 shadow rounded-lg text-slate-50 font-semibold uppercase text-xs px-6 py-3 hover:shadow-none"
