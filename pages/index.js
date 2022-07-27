@@ -5,6 +5,7 @@ import Link from '../components/Link';
 import MetaTags from '../components/MetaTags';
 import ProfilePicture from '../components/ProfilePicture';
 import Article from '../components/Article';
+import Grid from '../components/Grid';
 
 export default function Home({ articles }) {
     return (
@@ -15,9 +16,9 @@ export default function Home({ articles }) {
                 url="https://irsyadnotes.com"
             />
 
-            <div className="bg-[#20212E] border-b border-[#323446] py-8 sm:py-16 md:py-32 lg:py-40 mb-16">
+            <div className="bg-[#20212E] border-b border-[#323446] py-8 sm:py-16 md:py-32 lg:py-40 mb-8 lg:mb-16">
                 <Container>
-                    <div className="max-w-3xl mx-auto flex gap-4 lg:gap-10">
+                    <div className="max-w-3xl flex gap-4 lg:gap-10">
                         <div className="shrink-0">
                             <ProfilePicture />
                         </div>
@@ -64,21 +65,22 @@ export default function Home({ articles }) {
                 </Container>
             </div>
             <Container>
-                <div className="max-w-4xl mx-auto">
-                    <div className="mx-auto text-center mb-16">
-                        <h1 className="text-white font-bold text-xl lg:text-2xl">
-                            Latest Updates
-                        </h1>
-                        <div className="leading-relaxed text-gray-300">
-                            You can see and read all my writings below.
-                        </div>
-
-                        <div className="w-full bg-gradient-to-r from-transparent via-gray-700 to-transparent my-4 h-px"></div>
+                <div className="mb-6 lg:mb-16">
+                    <h1 className="text-white font-bold text-xl lg:text-2xl">
+                        Latest Updates
+                    </h1>
+                    <div className="leading-relaxed text-gray-300">
+                        You can see and read all my writings below.
                     </div>
+
+                    <div className="w-full bg-gradient-to-r from-gray-700 via-transparent to-transparent my-4 h-px"></div>
+                </div>
+
+                <Grid cols={3}>
                     {articles.map((article) => (
                         <Article article={article} key={article.id} />
                     ))}
-                </div>
+                </Grid>
             </Container>
         </>
     );

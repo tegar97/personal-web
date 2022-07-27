@@ -8,7 +8,7 @@ export default function Navbar() {
     return (
         <nav className="bg-gray-800 border-b border-gray-700">
             <div className="mx-auto lg:max-w-screen-2xl px-4">
-                <div className="flex items-center justify-center">
+                <div className="flex items-center">
                     <Link
                         className="text-white font-semibold pr-4"
                         href="/"
