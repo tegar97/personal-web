@@ -10,7 +10,6 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    {/* prettier-ignore */}
                     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png?v=1"/>
                     <link
                         rel="icon"
@@ -35,13 +34,14 @@ class MyDocument extends Document {
                     />
                     <link rel="shortcut icon" href="/favicon.ico?v=1" />
                     <meta name="msapplication-TileColor" content="#000000" />
-                    <meta name="theme-color" content="#0f172a" />
+                    <meta name="theme-color" content="#20212E" />
                     <link
                         href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;500;600;700&display=swap"
                         rel="stylesheet"
                     />
+                    {/* <link rel="stylesheet" href="https://parsinta.com/css/parsinta-exclusive.css" /> */}
                 </Head>
-                <body className="antialiased font-sans bg-slate-900">
+                <body className="antialiased font-sans bg-[#20212E] tracking-tight">
                     <Main />
                     <NextScript />
                 </body>

@@ -3,86 +3,96 @@ import AppLayout from '@/components/Layouts/AppLayout';
 import Container from '../components/Container';
 import Link from '../components/Link';
 import MetaTags from '../components/MetaTags';
+import ProfilePicture from '../components/ProfilePicture';
+import Article from '../components/Article';
 
-export default function Home() {
+export default function Home({ articles }) {
     return (
-        <div className="lg:min-h-screen flex items-center p-10 lg:p-0 justify-center">
+        <>
             <MetaTags
                 title="Irsyad Notes"
                 description="Let's start living like no one can help us in any event, so that when we are helped in certain times, it becomes a plus in itself."
-                url='https://irsyadnotes.com'
+                url="https://irsyadnotes.com"
             />
+
+            <div className="bg-[#20212E] border-b border-[#323446] py-8 sm:py-16 md:py-32 lg:py-40 mb-16">
+                <Container>
+                    <div className="max-w-3xl mx-auto flex gap-4 lg:gap-10">
+                        <div className="shrink-0">
+                            <ProfilePicture />
+                        </div>
+                        <div>
+                            <h1 className="text-2xl lg:text-5xl font-semibold tracking-tighter mb-3 lg:mb-5 text-white">
+                                Irsyad A. Panjaitan
+                            </h1>
+                            <div className="leading-relaxed lg:leading-loose text-base lg:text-lg text-gray-200">
+                                Let&apos;s start living like no one can help us
+                                in any event, so that when we are helped in
+                                certain times, it becomes a plus in itself. At
+                                this time, I&apos;m teaching practical
+                                screencast over on{' '}
+                                <a
+                                    className="text-sky-400 hover:text-sky-500 transition-colors duration-500 shadow-undersky"
+                                    href="https://parsinta.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Parsinta
+                                </a>
+                                . Let&apos;s talk over on{' '}
+                                <a
+                                    className="text-sky-400 hover:text-sky-500 transition-colors duration-500 shadow-undersky"
+                                    href="https://twitter.com/irsyadadl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Twitter
+                                </a>{' '}
+                                or{' '}
+                                <a
+                                    className="text-sky-400 hover:text-sky-500 transition-colors duration-500 shadow-undersky"
+                                    href="https://instagram.com/irsyadadl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Instagram
+                                </a>
+                                .
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </div>
             <Container>
-                <div className="max-w-xl mx-auto flex flex-col justify-center text-center px-4">
-                    <div className="mb-5 w-28 h-28 shadows shadow-sky-500/20 bg-contain mx-auto p-1 border-4 border-t-slate-900 border-r-sky-500 border-b-sky-500 border-l-slate-900 rounded-full bg-[url(https://www.gravatar.com/avatar/6d999db3cd931c3ed11d21c36d533a5e?d=identicon&s=300)]"></div>
-                    <h1 className="text-2xl font-semibold tracking-tighter mb-3 lg:mb-5 text-white">
-                        Irsyad A. Panjaitan
-                    </h1>
-                    <div className="leading-relaxed lg:leading-loose text-base lg:text-lg text-gray-400">
-                        Let&apos;s start living like no one can help us in any
-                        event, so that when we are helped in certain times, it
-                        becomes a plus in itself.
-                        <p className="mt-5">
-                            At this time, I&apos;m teaching practical screencast
-                            over on{' '}
-                            <a
-                                className="text-sky-400 hover:text-sky-500 transition-colors duration-500 shadow-undersky"
-                                href="https://parsinta.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Parsinta
-                            </a>
-                            . Let&apos;s talk over on{' '}
-                            <a
-                                className="text-sky-400 hover:text-sky-500 transition-colors duration-500 shadow-undersky"
-                                href="https://twitter.com/irsyadadl"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Twitter
-                            </a>{' '}
-                            or{' '}
-                            <a
-                                className="text-sky-400 hover:text-sky-500 transition-colors duration-500 shadow-undersky"
-                                href="https://instagram.com/irsyadadl"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Instagram
-                            </a>
-                            .
-                        </p>
-                    </div>
+                <div className="max-w-4xl mx-auto">
+                    <div className="mx-auto text-center mb-16">
+                        <h1 className="text-white font-bold text-xl lg:text-2xl">
+                            Latest Updates
+                        </h1>
+                        <div className="leading-relaxed text-gray-300">
+                            You can see and read all my writings below.
+                        </div>
 
-                    <div className="flex items-center justify-center mt-6 gap-2">
-                        {/* <Link href='/articles' className='border-t border-slate-700 bg-slate-800 shadow rounded-lg text-slate-50 font-semibold uppercase text-xs px-6 py-3 hover:shadow-none'>
-                            Parsinta
-                        </Link>
-
-                        <Link href='/articles' className='border-t border-slate-700 bg-slate-800 shadow rounded-lg text-slate-50 font-semibold uppercase text-xs px-6 py-3 hover:shadow-none'>
-                            Twitter
-                        </Link>
-                        <Link href='/articles' className='border-t border-slate-700 bg-slate-800 shadow rounded-lg text-slate-50 font-semibold uppercase text-xs px-6 py-3 hover:shadow-none'>
-                            Instagram
-                        </Link> */}
-                        <a
-                            href="https://parsinta.com/ebooks"
-                            className="border-t border-slate-700 bg-slate-800 shadow rounded-lg text-slate-50 font-semibold uppercase text-xs px-6 py-3 hover:shadow-none"
-                        >
-                            My Ebooks
-                        </a>
-                        <Link
-                            href="/articles"
-                            className="border-t border-slate-700 bg-slate-800 shadow rounded-lg text-slate-50 font-semibold uppercase text-xs px-6 py-3 hover:shadow-none"
-                        >
-                            Read my Blog
-                        </Link>
+                        <div className="w-full bg-gradient-to-r from-transparent via-gray-700 to-transparent my-4 h-px"></div>
                     </div>
+                    {articles.map((article) => (
+                        <Article article={article} key={article.id} />
+                    ))}
                 </div>
             </Container>
-        </div>
+        </>
     );
+}
+
+export async function getStaticProps() {
+    const res = await fetch('https://parsinta.com/api/articles');
+    const articles = await res.json();
+    return {
+        props: {
+            articles,
+        },
+        revalidate: 1200, // In seconds
+    };
 }
 
 Home.getLayout = (page) => <AppLayout children={page} />;
