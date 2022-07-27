@@ -32,7 +32,7 @@ export default function Article({ article }) {
             <div className="w-11/12">
                 <Link
                     href={`/articles/${article.slug}`}
-                    className="hover:lg:bg-gray-800 mb-12 group lg:p-4 lg:-mt-[22px] block rounded-lg border-t border-transparent hover:lg:border-gray-700 hover:lg:shadow-lg"
+                    className="hover:lg:bg-gray-800 mb-12 group lg:p-4 lg:-mt-[22px] block rounded-lg border-t border-transparent hover:lg:border-gray-700 hover:lg:shadow-md shadow-gray-900"
                 >
                     <h4 className="text-white font-semibold mb-2 mt-1 lg:leading-none">
                         {article.title}
