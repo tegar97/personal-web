@@ -1,11 +1,11 @@
 import React from 'react';
 import AppLayout from '@/components/Layouts/AppLayout';
 import Container from '../components/Container';
-import Link from '../components/Link';
 import MetaTags from '../components/MetaTags';
 import ProfilePicture from '../components/ProfilePicture';
 import Article from '../components/Article';
 import Grid from '../components/Grid';
+import axios from 'axios';
 
 export default function Home({ articles }) {
     return (
@@ -87,8 +87,13 @@ export default function Home({ articles }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch('https://parsinta.com/api/articles');
-    const articles = await res.json();
+    const { data } = await axios(process.env.NEXT_PUBLIC_API, {
+        headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
+        },
+    });
+
+    const articles = data;
     return {
         props: {
             articles,

@@ -10,6 +10,7 @@
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
+    "axios": "^0.27.2",
     "clsx": "^1.2.1",
     "highlight.js": "^11.5.1",
     "highlightjs-blade": "^0.1.0",

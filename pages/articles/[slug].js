@@ -4,6 +4,7 @@ import MetaTags from '@/components/MetaTags';
 import Prose from '@/components/Prose';
 import Image from 'next/image';
 import AppLayout from '../../components/Layouts/AppLayout';
+import axios from 'axios'
 
 export default function Show({ article }) {
     return (
@@ -42,8 +43,12 @@ export default function Show({ article }) {
 }
 
 export async function getServerSideProps({ params }) {
-    const res = await fetch(`https://parsinta.com/api/articles/${params.slug}`);
-    const article = await res.json();
+    const { data } = await axios(`${process.env.NEXT_PUBLIC_API}/${params.slug}`, {
+        headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
+        },
+    });
+    const article = data;
     return { props: { article } };
 }
 

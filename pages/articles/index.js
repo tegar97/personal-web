@@ -34,8 +34,12 @@ export default function Index({ articles }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch('https://parsinta.com/api/articles');
-    const articles = await res.json();
+    const { data } = await axios(process.env.NEXT_PUBLIC_API, {
+        headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
+        },
+    });
+    const articles = data;
     return {
         props: {
             articles,
