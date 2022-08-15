@@ -9,7 +9,7 @@ export default function ExternalButtonLink({ className = "", href, children }) {
             rel="noreferrer"
             className={clsx(
                 className,
-                "inline-flex items-center gap-x-2 rounded-lg bg-white py-2.5 px-5 font-medium text-black shadow transition duration-300 hover:shadow-md"
+                "inline-flex items-center gap-x-2 rounded-lg bg-white py-2 lg:py-2.5 px-4 lg:px-5 font-medium text-black shadow transition duration-300 hover:shadow-md"
             )}
         >
             {children}

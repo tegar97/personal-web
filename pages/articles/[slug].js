@@ -16,9 +16,9 @@ export default function Show({ article }) {
                 image={article.picture}
                 url={`https://irsyadnotes.com/articles/${article.slug}`}
             />
-            <div className="-mt-48">
+            <div className="lg:-mt-72">
                 <Container>
-                    <div className="mb-12 max-w-4xl rounded-2xl bg-white p-10 shadow-lg">
+                    <div className="mb-24 lg:mb-12 max-w-4xl rounded-2xl bg-white lg:p-10 lg:shadow-lg">
                         <Image
                             className="-ml-92 rounded-lg"
                             width={1280}
