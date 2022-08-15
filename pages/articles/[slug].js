@@ -1,10 +1,10 @@
-import React from 'react';
-import Container from '@/components/Container';
-import MetaTags from '@/components/MetaTags';
-import Prose from '@/components/Prose';
-import Image from 'next/image';
-import AppLayout from '../../components/Layouts/AppLayout';
-import axios from 'axios'
+import React from "react";
+import Container from "@/components/Container";
+import MetaTags from "@/components/MetaTags";
+import Prose from "@/components/Prose";
+import Image from "next/image";
+import AppLayout from "../../components/Layouts/AppLayout";
+import axios from "axios";
 
 export default function Show({ article }) {
     return (
@@ -16,23 +16,23 @@ export default function Show({ article }) {
                 image={article.picture}
                 url={`https://irsyadnotes.com/articles/${article.slug}`}
             />
-            <div className="p-5 lg:p-10">
+            <div className="-mt-48">
                 <Container>
-                    <div className="max-w-3xl mx-auto">
+                    <div className="mb-12 max-w-4xl rounded-2xl bg-white p-10 shadow-lg">
                         <Image
-                            className="rounded-lg"
+                            className="-ml-92 rounded-lg"
                             width={1280}
                             height={720}
                             src={article.picture}
                         />
                         <div className="mt-10">
-                            <h1 className="text-3xl lg:text-3xl text-white mb-4 tracking-tight font-bold">
+                            <h1 className="mb-4 text-3xl font-bold tracking-tight lg:text-3xl">
                                 {article.title}
                             </h1>
-                            <span className="text-sm text-gray-400 font-mono">
+                            <span className="font-mono text-sm text-gray-600">
                                 Published on {article.created}
                             </span>
-                            <div className="w-full bg-gradient-to-r mt-4 mb-4 from-gray-700 to-gray-800 via-transparent h-px"></div>
+                            <div className="mt-4 mb-4 h-px w-full bg-gradient-to-r from-gray-200 via-transparent to-transparent"></div>
                             <Prose children={article.body} />
                         </div>
                     </div>
@@ -43,11 +43,14 @@ export default function Show({ article }) {
 }
 
 export async function getServerSideProps({ params }) {
-    const { data } = await axios(`${process.env.NEXT_PUBLIC_API}/${params.slug}`, {
-        headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
-        },
-    });
+    const { data } = await axios(
+        `${process.env.NEXT_PUBLIC_API}/${params.slug}`,
+        {
+            headers: {
+                Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
+            },
+        }
+    );
     const article = data;
     return { props: { article } };
 }

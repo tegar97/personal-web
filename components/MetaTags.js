@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import React from 'react';
+import Head from "next/head";
+import React from "react";
 
-export default function MetaTags({ title, description, url, image = '' }) {
+export default function MetaTags({ title, description, url, image = "" }) {
     return (
         <Head>
             <title>{title}</title>

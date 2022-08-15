@@ -1,26 +1,26 @@
-import React from 'react';
-import Link from './Link';
+import React from "react";
+import Link from "./Link";
 
 export default function Article({ article }) {
     return (
         <Link
             href={`/articles/${article.slug}`}
-            className="group shadow-inner shadow-black/5 hover:shadow-black/10 transition duration-200 bg-gray-950 h-full flex flex-col p-6 rounded-lg"
+            className="bg-gray-950 group flex h-full flex-col rounded-lg p-6 shadow-inner shadow-black/5 transition duration-200 hover:shadow-black/10"
         >
-            <div className='flex-1'>
-                <h4 className="text-white font-semibold mb-4">
+            <div className="flex-1">
+                <h4 className="mb-4 font-semibold text-white">
                     {article.title}
                 </h4>
-                <div className="leading-relaxed text-sm lg:text-base text-gray-300 line-clamp-3 mb-3">
+                <div className="mb-3 text-sm leading-relaxed text-gray-300 line-clamp-3 lg:text-base">
                     {article.teaser}
                 </div>
             </div>
-            <div className="flex items-center justify-between mt-2">
-                <span className="lg:text-base text-sm text-white transition-colors font-medium duration-500">
+            <div className="mt-2 flex items-center justify-between">
+                <span className="text-sm font-medium text-white transition-colors duration-500 lg:text-base">
                     Read more
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 ml-2 fill-gray-300 hidden group-hover:inline"
+                        className="ml-2 hidden h-4 w-4 fill-gray-300 group-hover:inline"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                     >
@@ -33,7 +33,7 @@ export default function Article({ article }) {
                     <span className="sr-only">{article.title}</span>
                 </span>
 
-                <span className="text-gray-300 text-xs font-medium">
+                <span className="text-xs font-medium text-gray-300">
                     {article.created}
                 </span>
             </div>

@@ -66,8 +66,7 @@ code.hljs {
 .hljs-number,
 .hljs-symbol,
 .hljs-variable.constant_,
-.language-php .hljs-function .hljs-title
-{
+.language-php .hljs-function .hljs-title {
     color: var(--blue) !important;
 }
 .hljs-class .hljs-title,
@@ -126,5 +125,5 @@ code.hljs {
 
 .language-php .hljs-keyword,
 .language-php .hljs-title.function_ {
-    color: var(--gray-light)!important;
+    color: var(--gray-light) !important;
 }
