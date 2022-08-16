@@ -22,7 +22,7 @@ export default function Home({ articles }) {
                 <div className="mb-6 lg:mb-16">
                     <section
                         id="articles"
-                        className="-mt-16 bg-gradient-to-b from-indigo-50 via-green-50 to-gray-100 py-8"
+                        className="-mt-8 bg-gradient-to-b from-indigo-50 via-green-50 to-gray-100 py-8 lg:-mt-16"
                     >
                         <Container>
                             <div>
@@ -60,7 +60,7 @@ export default function Home({ articles }) {
                             <TextHeader className="mb-6 lg:mb-10">
                                 I wrote the book of Laravel.
                             </TextHeader>
-                            <div className="grid grid-cols-1 gap-4 lg:gap-10 lg:grid-cols-2">
+                            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-10">
                                 <div>
                                     <a
                                         href="https://parsinta.com/s/elrvl"
@@ -75,7 +75,7 @@ export default function Home({ articles }) {
                                                 src="https://parsinta.s3.ap-southeast-1.amazonaws.com/images/books/belajar-laravel-lebih-dari-sekedar-fundamental.jpg"
                                             />
                                         </div>
-                                        <div className="lg:hidden block">
+                                        <div className="block lg:hidden">
                                             <Image
                                                 className="rounded-lg"
                                                 width={1280}
@@ -134,7 +134,7 @@ export default function Home({ articles }) {
                                             className="w-full justify-center"
                                             href="https://parsinta.s3.ap-southeast-1.amazonaws.com/ebooks/belajar-laravel-lebih-dari-sekedar-fundamental.pdf"
                                         >
-                                            Lihat sample
+                                            Sample
                                         </ExternalButtonLink>
                                         <ExternalButtonLink
                                             className="w-full justify-center"

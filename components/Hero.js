@@ -29,8 +29,12 @@ export default function Hero() {
                                 </h1>
                             </a>
                         </Link>
-                        <div className="prose prose-a:no-underline prose-indigo lg:prose-lg">
-                            I'm founder of <strong className="text-black font-semibold">Parsinta</strong>. Let&apos;s start living like no one can help us in
+                        <div className="prose prose-indigo prose-a:no-underline lg:prose-lg">
+                            I'm founder of{" "}
+                            <strong className="font-semibold text-black">
+                                Parsinta
+                            </strong>
+                            . Let&apos;s start living like no one can help us in
                             any event, so that when we are helped in certain
                             times, it becomes a plus in itself. At this time,
                             I&apos;m teaching practical screencast over on{" "}

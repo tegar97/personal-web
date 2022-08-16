@@ -18,7 +18,7 @@ export default function Show({ article }) {
             />
             <div className="lg:-mt-72">
                 <Container>
-                    <div className="mb-24 lg:mb-12 max-w-4xl rounded-2xl bg-white lg:p-10 lg:shadow-lg">
+                    <div className="mb-24 max-w-4xl rounded-2xl bg-white lg:mb-12 lg:p-10 lg:shadow-lg">
                         <Image
                             className="-ml-92 rounded-lg"
                             width={1280}
