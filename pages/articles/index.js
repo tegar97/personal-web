@@ -5,6 +5,7 @@ import MetaTags from "@/components/MetaTags";
 import axios from "axios";
 import TextHeader from "../../components/TextHeader";
 import Link from "next/link";
+import ArticleBlock from "../../components/ArticleBlock";
 
 export default function Index({ articles }) {
     return (
@@ -16,31 +17,7 @@ export default function Index({ articles }) {
             />
 
             <div className="mb-6 lg:mb-16">
-                <section
-                    id="articles"
-                    className="-mt-16 bg-gradient-to-b from-indigo-50 via-green-50 to-gray-100 py-8"
-                >
-                    <Container>
-                        <div>
-                            <TextHeader className="mb-10">
-                                My articles
-                            </TextHeader>
-                            <div className="prose flex h-full flex-col prose-a:no-underline">
-                                <ol>
-                                    {articles.map((article) => (
-                                        <li key={article.id}>
-                                            <Link
-                                                href={`/articles/${article.slug}`}
-                                            >
-                                                <a>{article.title}</a>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ol>
-                            </div>
-                        </div>
-                    </Container>
-                </section>
+                <ArticleBlock articles={articles} />
             </div>
         </>
     );

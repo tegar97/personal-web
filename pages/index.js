@@ -8,6 +8,8 @@ import ExternalButtonLink from "../components/ExternalButtonLink";
 import Image from "next/image";
 import TextHeader from "../components/TextHeader";
 import Link from "next/link";
+import ArticleBlock from "../components/ArticleBlock";
+import Project from "../components/Project";
 
 export default function Home({ articles }) {
     return (
@@ -20,38 +22,11 @@ export default function Home({ articles }) {
 
             <>
                 <div className="mb-6 lg:mb-16">
-                    <section
-                        id="articles"
-                        className="-mt-8 bg-gradient-to-b from-indigo-50 via-green-50 to-gray-100 py-8 lg:-mt-16"
-                    >
-                        <Container>
-                            <div>
-                                <TextHeader className="mb-10">
-                                    My articles
-                                </TextHeader>
-                                <div className="prose flex h-full flex-col prose-a:no-underline">
-                                    <ol>
-                                        {articles
-                                            .slice(0, 20)
-                                            .map((article) => (
-                                                <li key={article.id}>
-                                                    <Link
-                                                        href={`/articles/${article.slug}`}
-                                                    >
-                                                        <a>{article.title}</a>
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                    </ol>
-                                    <Link href="/articles">
-                                        <a className="text-indigo-500 underline">
-                                            More articles.
-                                        </a>
-                                    </Link>
-                                </div>
-                            </div>
-                        </Container>
-                    </section>
+                    <ArticleBlock
+                        moreArticle={true}
+                        articles={articles.slice(0, 15)}
+                    />
+                    <Project />
                     <section
                         id="book"
                         className="bg-gradient-to-b from-gray-100 via-sky-50 to-gray-100 py-8 lg:py-16"
@@ -67,69 +42,36 @@ export default function Home({ articles }) {
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        <div className="hidden lg:block">
-                                            <Image
-                                                className="rounded-l-3xl rounded-r-lg"
-                                                width={1200}
-                                                height={1698}
-                                                src="https://parsinta.s3.ap-southeast-1.amazonaws.com/images/books/belajar-laravel-lebih-dari-sekedar-fundamental.jpg"
-                                            />
-                                        </div>
-                                        <div className="block lg:hidden">
-                                            <Image
-                                                className="rounded-lg"
-                                                width={1280}
-                                                height={720}
-                                                src="https://parsinta.s3.ap-southeast-1.amazonaws.com/images/books/belajar-laravel-lebih-dari-sekedar-fundamental-og-image.jpg"
-                                            />
-                                        </div>
+                                        <Image
+                                            className="rounded-lg"
+                                            alt="The book"
+                                            width={1280}
+                                            height={720}
+                                            src="https://parsinta.s3.ap-southeast-1.amazonaws.com/images/books/belajar-laravel-lebih-dari-sekedar-fundamental-og-image.jpg"
+                                        />
                                     </a>
                                 </div>
-                                <div className="prose flex h-full flex-col prose-a:no-underline">
-                                    <h1 className="leading-0 mb-0 text-xl lg:text-3xl">
-                                        Belajar Laravel Lebih Dari Sekedar
-                                        Fundamental
+                                <div>
+                                    <h1 className="leading-0 mb-0 text-xl font-bold lg:text-3xl">
+                                        Learning Laravel Is More Than Just
+                                        Fundamentals
                                     </h1>
-                                    <p className="lg:lead">
-                                        Buku ini akan mengajarkan Anda bagaimana
-                                        menggunakan framework laravel dengan
-                                        baik.
+                                    <p className="mt-6 text-lg text-gray-500">
+                                        This book will teach you how to use
+                                        laravel framework with best practices as
+                                        recommended by experts.
                                     </p>
-                                    <div className="mb-5 rounded-lg border border-blue-300 bg-blue-50 p-4">
-                                        Ebook akan terus diperbarui jika ada
-                                        perubahan yang signifikan pada framework
-                                        yang sedang digunakan. Dan bagi yang
-                                        sudah membelinya akan diberikan secara
-                                        gratis.
-                                    </div>
-                                    <div className="prose hidden flex-1 lg:prose-lg lg:block">
-                                        <p>
-                                            Dalam ebook ini kita akan
-                                            mempelajari Laravel dari awal namun
-                                            tidak sekedar fundamental, kita akan
-                                            membahas bagaimana
-                                            mengimplementasikan relasi eloquent
-                                            yang lumayan kompleks seperti many
-                                            to many, polimorpik, dan banyak
-                                            lagi. Dan sudah pasti akan ada
-                                            banyak tips and triks yang
-                                            terkandung dalam buku ini sehingga
-                                            Anda bisa memilih ingin menggunakan
-                                            metode yang seperti apa.
-                                        </p>
-                                        <p>
-                                            Untuk versi Laravel, dalam buku ini
-                                            memakai versi 9.18 yang nanti akan
-                                            di upgrade menjadi 9.19 pada saat
-                                            mengimplementasikan vite pada bab
-                                            "Digging Deeper". Untuk PHP sendiri
-                                            sudah pasti 8+. Bagi Anda yang
-                                            mengikuti buku ini dengan versi
-                                            laravel yang lebih dari 9.19, itu
-                                            sama sekali tidak masalah.
-                                        </p>
-                                    </div>
-                                    <div className="flex items-center gap-4">
+                                    <p className="mt-6 text-lg text-gray-500">
+                                        If you don't understand Indonesian,
+                                        unfortunately this book won't be of any
+                                        use to you.{" "}
+                                        <strong className="font-semibold text-black">
+                                            Because this book is made in my
+                                            everyday language, namely Indonesian
+                                        </strong>
+                                        .
+                                    </p>
+                                    <div className="my-6 flex items-center gap-4">
                                         <ExternalButtonLink
                                             className="w-full justify-center"
                                             href="https://parsinta.s3.ap-southeast-1.amazonaws.com/ebooks/belajar-laravel-lebih-dari-sekedar-fundamental.pdf"
