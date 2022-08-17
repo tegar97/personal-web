@@ -45,8 +45,8 @@ export default function Project() {
                 <div>
                     <TextHeader className="mb-10">My projects</TextHeader>
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                        {projects.map((project) => (
-                            <div key={project.id}>
+                        {projects.map((project, i) => (
+                            <div key={i}>
                                 <a
                                     className="block rounded-lg bg-white p-6 shadow transition duration-200 hover:shadow-md"
                                     href={project.slug}
