@@ -35,6 +35,7 @@ const projects = [
         type: "Javascript",
     },
 ];
+
 export default function Project() {
     return (
         <section
