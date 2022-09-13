@@ -22,7 +22,6 @@ export function ThemeSwitcher() {
             setSetting('light');
         }
     }
-
     return (
         <button
             onClick={onChange}
