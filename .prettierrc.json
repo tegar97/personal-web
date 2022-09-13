@@ -1,4 +1,10 @@
 {
     "tabWidth": 4,
+<<<<<<< HEAD
     "proseWrap": "preserve"
+=======
+    "semi": true,
+    "singleQuote": true,
+    "jsxSingleQuote": true
+>>>>>>> e28b7d4 (First)
 }

@@ -1,35 +1,27 @@
-const colors = require("tailwindcss/colors");
-const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require('tailwindcss/defaultTheme');
+const { zinc } = require('tailwindcss/colors');
+/** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        "./pages/**/*.{js,ts,jsx,tsx}",
-        "./components/**/*.{js,ts,jsx,tsx}",
-        "./Layouts/**/*.{js,ts,jsx,tsx}",
+        './pages/**/*.{js,ts,jsx,tsx}',
+        './styles/**/*.{js}',
+        './components/**/*.{js,ts,jsx,tsx}',
     ],
+    darkMode: 'class',
     theme: {
         extend: {
             colors: {
-                gray: colors.slate,
+                gray: zinc,
             },
-            boxShadow: (theme) => ({
-                undersky:
-                    theme("colors.gray.900") +
-                    " 0px -0.166667em 0px 0px inset, " +
-                    theme("colors.sky.800") +
-                    " 0px -0.333333em 0px 0px inset",
-            }),
             fontFamily: {
-                sans: ["Inter", ...defaultTheme.fontFamily.sans],
-                mono:
-                    [
-                        '"Fira Code", "Dank Mono"',
-                        ...defaultTheme.fontFamily.mono,
-                    ] + "!important",
+                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+                mono: [
+                    'Fira Code',
+                    'Dank Mono',
+                    ...defaultTheme.fontFamily.mono,
+                ],
             },
         },
     },
-    plugins: [
-        require("@tailwindcss/line-clamp"),
-        require("@tailwindcss/typography"),
-    ],
+    plugins: [require('@tailwindcss/typography')],
 };
