@@ -20,8 +20,8 @@ export default function PostPage({ post }) {
     return (
         <>
             <Meta
-                title={`${post.title} / Irsyad Notes`}
-                url={`https://irsyadnotes.com/articles/${post.slug}`}
+                title={`${post.meta.title} / Irsyad Notes`}
+                url={`https://irsyadnotes.com/articles/${post.meta.slug}`}
             />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
