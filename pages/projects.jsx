@@ -53,7 +53,7 @@ const projects = [
 export default function Projects() {
     return (
         <>
-            <Meta title='Projects' url={`https://irsyadnotes.com/projects`} />
+            <Meta title='Projects / Irsyad Notes' url={`https://irsyadnotes.com/projects`} />
             <div className='mb-4 sm:mb-8 lg:mb-16'>
                 <Container>
                     <div className='mb-4'>

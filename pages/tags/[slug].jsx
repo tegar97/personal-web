@@ -7,13 +7,15 @@ import { sync } from 'glob';
 import matter from 'gray-matter';
 import { POSTS_PATH } from '@/libs/helpers';
 import Container from '@/components/Container';
+import Meta from '@/components/Meta';
 
 export default function TagPage({ slug, articles }) {
     return (
         <>
-            <Head>
-                <title>Tag: {slug}</title>
-            </Head>
+            <Meta
+                title={`${slug} / Irsyad Notes`}
+                url={`https://irsyadnotes.com/articles`}
+            />
             <div className='bg-white'>
                 <Container>
                     <h1>Tag: {slug}</h1>

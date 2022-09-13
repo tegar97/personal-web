@@ -7,7 +7,7 @@ import Meta from '@/components/Meta';
 export default function About() {
     return (
         <>
-            <Meta title='About' url='https://irsyadnotes.com/about' />
+            <Meta title='About / Irsyad Notes' url='https://irsyadnotes.com/about' />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
                     <div className='flex flex-col-reverse gap-10 lg:flex-row'>

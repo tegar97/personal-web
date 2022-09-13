@@ -13,13 +13,12 @@ import Container from '@/components/Container';
 import styles from '@/components/styles';
 import clsx from 'clsx';
 import Link from 'next/link';
+import Meta from '@/components/Meta';
 
 export default function index({ articles }) {
     return (
         <>
-            <Head>
-                <title>Irsyad Notes</title>
-            </Head>
+            <Meta title='Irsyad Notes' url={`https://irsyadnotes.com/articles`} />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
                     <div

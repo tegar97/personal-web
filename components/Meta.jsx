@@ -9,7 +9,7 @@ export default function Meta({
 }) {
     return (
         <Head>
-            <title>{title} / Irsyad Notes</title>
+            <title>{title}</title>
             <meta name='title' content={title} />
             <meta name='description' content={description} />
 
