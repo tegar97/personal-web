@@ -18,10 +18,12 @@ export default function index({ articles }) {
                 title='Articles / Irsyad Notes'
                 url={`https://irsyadnotes.com/articles`}
             />
-            <div className={clsx(
-                styles.whiteLayoutWithPaddingY,
-                'mb-4 sm:mb-8 lg:mb-16'
-            )}>
+            <div
+                className={clsx(
+                    styles.whiteLayoutWithPaddingY,
+                    'mb-4 sm:mb-8 lg:mb-16'
+                )}
+            >
                 <Container>
                     <div className='mb-4'>
                         <PageTitle>My Articles</PageTitle>

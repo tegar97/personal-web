@@ -57,10 +57,12 @@ export default function Projects() {
                 title='Projects / Irsyad Notes'
                 url={`https://irsyadnotes.com/projects`}
             />
-            <div className={clsx(
-                styles.whiteLayoutWithPaddingY,
-                'mb-4 sm:mb-8 lg:mb-16'
-            )}>
+            <div
+                className={clsx(
+                    styles.whiteLayoutWithPaddingY,
+                    'mb-4 sm:mb-8 lg:mb-16'
+                )}
+            >
                 <Container>
                     <div className='mb-4'>
                         <PageTitle>My Projects</PageTitle>
@@ -69,7 +71,7 @@ export default function Projects() {
                             projects on github.
                         </p>
                     </div>
-                    <ol className='mt-6 max-w-xl space-y-4 rounded-2xl p-6 dark:bg-gray-800/50 bg-gray-100'>
+                    <ol className='mt-6 max-w-xl space-y-4 rounded-2xl bg-gray-100 p-6 dark:bg-gray-800/50'>
                         {projects.map((project, i) => (
                             <li className='flex gap-4' key={i}>
                                 <div className='relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 dark:border dark:border-gray-700/50 dark:bg-gray-800 dark:ring-0'>

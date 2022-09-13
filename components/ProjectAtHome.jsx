@@ -24,7 +24,7 @@ const projects = [
 ];
 export default function ProjectAtHome() {
     return (
-        <div className='rounded-2xl p-6 dark:bg-gray-800/50 bg-gray-100'>
+        <div className='rounded-2xl bg-gray-100 p-6 dark:bg-gray-800/50'>
             <h2 className='flex text-sm font-semibold text-gray-900 dark:text-gray-100'>
                 <IconBriefcase stroke={1} />
                 <span className='ml-3'>Projects</span>
@@ -59,7 +59,7 @@ export default function ProjectAtHome() {
                 ))}
             </ol>
             <Link href='/projects'>
-                <a className='group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white shadow py-2 px-3 text-sm font-semibold text-gray-900 outline-offset-2 transition hover:bg-gray-50 active:bg-gray-100 active:text-gray-900/60 active:transition-none dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-50 dark:active:bg-gray-700/50 dark:active:text-gray-50/70'>
+                <a className='group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white py-2 px-3 text-sm font-semibold text-gray-900 shadow outline-offset-2 transition hover:bg-gray-50 active:bg-gray-100 active:text-gray-900/60 active:transition-none dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-50 dark:active:bg-gray-700/50 dark:active:text-gray-50/70'>
                     View more
                 </a>
             </Link>

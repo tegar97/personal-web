@@ -5,7 +5,7 @@ import styles from '@/components/styles';
 export default function Articles({ articles }) {
     return articles.map((article) => (
         <Link key={article.slug} href={`/articles/${article.slug}`}>
-            <a className='-ml-6 rounded-xl p-6 hover:bg-gray-50 transition duration-300 dark:hover:bg-gray-800'>
+            <a className='-ml-6 rounded-xl p-6 transition duration-300 hover:bg-gray-50 dark:hover:bg-gray-800'>
                 <div className='flex-1'>
                     <h4
                         className={clsx(
