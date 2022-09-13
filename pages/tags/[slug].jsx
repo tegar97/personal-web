@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Articles from '@/components/articles';
+import Articles from '@/components/Articles';
 import React from 'react';
 import path from 'path';
 import fs from 'fs';
