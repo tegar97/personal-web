@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import NavLink from '../components/NavLink';
+import NavLink from './NavLink';
 import React from 'react';
 import Link from 'next/link';
 import { ThemeSwitcher } from '@/Components/ThemeSwitcher';
