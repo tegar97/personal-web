@@ -56,12 +56,12 @@ export default function Home({ articles }) {
                                         Learning Laravel Is More Than Just
                                         Fundamentals
                                     </h1>
-                                    <p className="mt-6 lg:text-lg text-gray-500">
+                                    <p className="mt-6 text-gray-500 lg:text-lg">
                                         This book will teach you how to use
                                         laravel framework with best practices as
                                         recommended by experts.
                                     </p>
-                                    <p className="mt-6 lg:text-lg text-gray-500">
+                                    <p className="mt-6 text-gray-500 lg:text-lg">
                                         If you don't understand Indonesian,
                                         unfortunately this book won't be of any
                                         use to you.{" "}

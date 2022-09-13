@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "./Container";
-import Link from "./Link";
 import TextHeader from "./TextHeader";
 const projects = [
     {
