@@ -5,8 +5,7 @@ import styles from '@/components/styles';
 
 export function ThemeSwitcher() {
     let [setting, setSetting] = useTheme('system');
-
-    function onChange() {
+    const onChange = () => {
         if (setting === 'light') {
             setSetting('dark');
         }
