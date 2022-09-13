@@ -140,8 +140,8 @@ export default function Uses() {
                         <div className='lg:ml-6'>
                             <h4>Raycast</h4>
                             <p>
-                                I used to use Alfred before, but since I know
-                                how amazing Raycast is, I feel very stupid if I
+                                Long time with <strong>Alfred</strong>, but since I know
+                                how amazing <strong>Raycast</strong> is, I feel very stupid if I
                                 don't use this tool.
                             </p>
                             <h4>Notes</h4>
@@ -156,7 +156,7 @@ export default function Uses() {
                                 books. So I need an application that supports
                                 the name Markdown. So typeora is my choice for
                                 now. It's not free, when I bought it it was
-                                still around $15.
+                                still around <strong>$15</strong>.
                             </p>
                             <h4>Xnapper</h4>
                             <p>
@@ -179,7 +179,7 @@ export default function Uses() {
                             <p>
                                 I use this tool to edit all the videos in
                                 Parsinta. Previously I did use screensflow, obs,
-                                and until I realized that DR was more powerful.
+                                and until I realized that <strong>D/R</strong> was more powerful.
                             </p>
                         </div>
                         <p>
