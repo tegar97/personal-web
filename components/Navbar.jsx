@@ -23,7 +23,7 @@ export default function Navbar() {
                 <NavLink href='/projects' value='Projects' />
                 <NavLink href='/uses' value='Uses' />
             </ul>
-            <div className='hidden sm:block'>
+            <div className='ml-2'>
                 <ThemeSwitcher />
             </div>
         </div>

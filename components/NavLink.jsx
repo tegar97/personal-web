@@ -5,7 +5,7 @@ export default function NavLink({ href, value, children }) {
     return (
         <li>
             <Link href={href}>
-                <a className='inline-flex px-4 py-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
+                <a className='inline-flex px-3 lg:px-4 py-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
                     {value || children}
                 </a>
             </Link>

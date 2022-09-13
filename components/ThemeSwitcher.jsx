@@ -28,7 +28,7 @@ export function ThemeSwitcher() {
             type='button'
             className={clsx(
                 styles.flexCenter,
-                'h-8 w-8 rounded-full bg-white shadow dark:bg-gray-700 dark:text-white dark:shadow-pink-500/20'
+                'h-9 w-9 rounded-full bg-white shadow dark:bg-gray-800 dark:text-white'
             )}
         >
             <span>
