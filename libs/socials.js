@@ -14,7 +14,7 @@ export const socials = [
     },
     {
         name: 'Instagram',
-        url: 'https://intagram.com/irsyadadl',
+        url: 'https://instagram.com/irsyadadl',
         icon: IconBrandInstagram,
     },
     {
