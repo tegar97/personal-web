@@ -5,7 +5,7 @@ import fs from 'fs';
 import { sync } from 'glob';
 import matter from 'gray-matter';
 import { POSTS_PATH } from '@/libs/helpers';
-import Articles from '@/components/articles';
+import Articles from '@/components/Articles';
 import PageTitle from '@/components/PageTitle';
 import ProjectAtHome from '@/components/ProjectAtHome';
 import Head from 'next/head';

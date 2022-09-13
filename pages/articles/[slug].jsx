@@ -5,7 +5,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeToc from '@jsdevtools/rehype-toc';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
-import YouTube from '@/components/youTube';
+import YouTube from '@/components/YouTube';
 import { POSTS_PATH } from '@/libs/helpers';
 import React from 'react';
 import path from 'path';
