@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 Irsyadnotes.com is run with [next.js](https://nextjs.org/), and hosted by [vercel](https://vercel.com/dashboard). So you'll see that there are several articles on it, all of them are generated from articles on [parsinta](https://parsinta.com/articles), not all of them. But only what [@irsyadadl](https://twitter.com/irsyadadl) wrote.
-=======
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -35,4 +33,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<<<<<<< HEAD
+>>>>>>> e28b7d4 (First)
+=======
 >>>>>>> e28b7d4 (First)

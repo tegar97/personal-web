@@ -24,6 +24,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # local env files
 .env.local
@@ -34,6 +35,8 @@ yarn-error.log*
 # vercel
 .vercel
 =======
+=======
+>>>>>>> e28b7d4 (First)
 .pnpm-debug.log*
 
 # local env files
@@ -45,4 +48,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+<<<<<<< HEAD
+>>>>>>> e28b7d4 (First)
+=======
 >>>>>>> e28b7d4 (First)
