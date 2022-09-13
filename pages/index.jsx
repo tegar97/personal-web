@@ -44,19 +44,28 @@ export default function index({ articles }) {
                             </div>
                         </div>
                         <div className='w-full lg:w-1/3'>
-                            <div className={clsx(
-                                // styles.flexCenter,
+                            <div
+                                className={clsx(
+                                    // styles.flexCenter,
 
-                                'flex justify-end items-center gap-1'
-                            )}>
-                                <span className={styles.textMuted}>Follow me ⎯⎯⎯⎯</span>
-                                {socials.map(({url, icon: Icon}, i) => (
+                                    'flex items-center justify-end gap-1'
+                                )}
+                            >
+                                <span className={styles.textMuted}>
+                                    Follow me ⎯⎯⎯⎯
+                                </span>
+                                {socials.map(({ url, icon: Icon }, i) => (
                                     <Link href={url} key={i}>
-                                        <a className={clsx(
-                                            styles.flexCenter,
-                                            'w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded-full'
-                                        )}>
-                                            <Icon stroke={1} className='w-5 h-5'/>
+                                        <a
+                                            className={clsx(
+                                                styles.flexCenter,
+                                                'h-8 w-8 rounded-full bg-gray-100 dark:bg-gray-800'
+                                            )}
+                                        >
+                                            <Icon
+                                                stroke={1}
+                                                className='h-5 w-5'
+                                            />
                                         </a>
                                     </Link>
                                 ))}
