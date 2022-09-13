@@ -1,4 +1,4 @@
-export default function YouTube({ id }) {
+export default function Youtube({ id }) {
     return (
         <div className='relative h-0 w-full max-w-full overflow-hidden rounded-xl pb-[56.25%]'>
             <iframe

@@ -5,8 +5,8 @@ import rehypeSlug from 'rehype-slug';
 import rehypeToc from '@jsdevtools/rehype-toc';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
-import YouTube from '@/components/YouTube';
 import { POSTS_PATH } from '@/libs/helpers';
+import Youtube from '@/components/Youtube';
 import React from 'react';
 import path from 'path';
 import fs from 'fs';
@@ -33,7 +33,7 @@ export default function PostPage({ post }) {
                             <div className='prose prose-pink max-w-none prose-headings:!mb-2 prose-a:no-underline prose-pre:!rounded-2xl prose-pre:!p-6 dark:prose-invert lg:prose-lg'>
                                 <MDXRemote
                                     {...post.source}
-                                    components={{ YouTube, Image }}
+                                    components={{ Youtube, Image }}
                                 />
                             </div>
                         </div>

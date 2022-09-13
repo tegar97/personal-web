@@ -2,7 +2,7 @@ import Image from 'next/image';
 import NavLink from './NavLink';
 import React from 'react';
 import Link from 'next/link';
-import { ThemeSwitcher } from '@/Components/ThemeSwitcher';
+import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 export default function Navbar() {
     return (
         <div className='flex items-center justify-center px-4 md:justify-between'>
