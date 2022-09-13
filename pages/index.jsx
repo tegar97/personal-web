@@ -4,7 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import { sync } from 'glob';
 import matter from 'gray-matter';
-import { POSTS_PATH } from '@/helpers';
+import { POSTS_PATH } from '@/libs/helpers';
 import Articles from '@/components/articles';
 import PageTitle from '@/components/PageTitle';
 import ProjectAtHome from '@/components/ProjectAtHome';

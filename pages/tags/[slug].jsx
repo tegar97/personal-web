@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import Articles from '../../components/articles';
+import Articles from '@/components/articles';
 import React from 'react';
 import path from 'path';
 import fs from 'fs';
 import { sync } from 'glob';
 import matter from 'gray-matter';
-import { POSTS_PATH } from '../../helpers';
+import { POSTS_PATH } from '@/libs/helpers';
 import Container from '@/components/Container';
 
 export default function TagPage({ slug, articles }) {

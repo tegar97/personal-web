@@ -6,7 +6,7 @@ import rehypeToc from '@jsdevtools/rehype-toc';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
 import YouTube from '@/components/youTube';
-import { POSTS_PATH } from '@/helpers';
+import { POSTS_PATH } from '@/libs/helpers';
 import React from 'react';
 import path from 'path';
 import fs from 'fs';

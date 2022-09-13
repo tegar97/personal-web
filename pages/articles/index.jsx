@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import { sync } from 'glob';
 import matter from 'gray-matter';
-import { POSTS_PATH } from '@/helpers';
+import { POSTS_PATH } from '@/libs/helpers';
 import ArticlesGrid from '@/components/ArticlesGrid';
 import PageTitle from '@/components/PageTitle';
 import Container from '@/components/Container';
