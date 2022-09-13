@@ -29,7 +29,7 @@ export default function index({ articles }) {
                         className='flex flex-col gap-6 lg:flex-row lg:gap-10'
                     >
                         <div className='w-full lg:w-2/3'>
-                            <div className='mb-6 rounded-2xl bg-gray-100 p-4 lg:p-10 lg:-ml-10 dark:bg-gray-900'>
+                            <div className='mb-6 rounded-2xl bg-gray-100 p-4 lg:p-10 lg:-ml-10 dark:bg-gray-800/50'>
                                 <PageTitle className='mb-3 lg:mb-6'>
                                     Software I use, gadgets I love, and other
                                     things I recommend.
@@ -46,7 +46,7 @@ export default function index({ articles }) {
                                 </section>
                                 <div className="mt-6">
                                     <Link href='/uses'>
-                                        <a className="px-4 py-2 5 font-semibold dark:bg-gray-800 dark:text-white rounded-full bg-white shadow">
+                                        <a className="px-4 py-2 5 font-semibold dark:bg-gray-700 dark:text-white rounded-full bg-white shadow">
                                             Read more
                                         </a>
                                     </Link>
