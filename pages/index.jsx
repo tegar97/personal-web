@@ -18,7 +18,10 @@ import Meta from '@/components/Meta';
 export default function index({ articles }) {
     return (
         <>
-            <Meta title='Irsyad Notes' url={`https://irsyadnotes.com/articles`} />
+            <Meta
+                title='Irsyad Notes'
+                url={`https://irsyadnotes.com/articles`}
+            />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
                     <div

@@ -14,7 +14,10 @@ import Meta from '@/components/Meta';
 export default function index({ articles }) {
     return (
         <>
-            <Meta title='Articles / Irsyad Notes' url={`https://irsyadnotes.com/articles`} />
+            <Meta
+                title='Articles / Irsyad Notes'
+                url={`https://irsyadnotes.com/articles`}
+            />
             <div className='mb-4 sm:mb-8 lg:mb-16'>
                 <Container>
                     <div className='mb-4'>

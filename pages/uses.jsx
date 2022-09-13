@@ -7,7 +7,10 @@ import React from 'react';
 export default function Uses() {
     return (
         <>
-            <Meta title='Uses / Irsyad Notes' url={`https://irsyadnotes.com/uses`} />
+            <Meta
+                title='Uses / Irsyad Notes'
+                url={`https://irsyadnotes.com/uses`}
+            />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
                     <PageTitle className='mb-6'>

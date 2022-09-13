@@ -23,10 +23,6 @@ class MyDocument extends Document {
         return (
             <Html className='dark scroll-smooth'>
                 <Head>
-                    <meta
-                        name='viewport'
-                        content='initial-scale=1.0, width=device-width'
-                    />
                     <link
                         rel='preconnect'
                         href='https://fonts.googleapis.com'
