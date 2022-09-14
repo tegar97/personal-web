@@ -20,7 +20,7 @@ export function ThemeSwitcher() {
         if (setting == 'system') {
             setSetting('light');
         }
-    }
+    };
 
     return (
         <button

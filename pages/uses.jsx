@@ -140,9 +140,10 @@ export default function Uses() {
                         <div className='lg:ml-6'>
                             <h4>Raycast</h4>
                             <p>
-                                Long time with <strong>Alfred</strong>, but since I know
-                                how amazing <strong>Raycast</strong> is, I feel very stupid if I
-                                don't use this tool.
+                                Long time with <strong>Alfred</strong>, but
+                                since I know how amazing{' '}
+                                <strong>Raycast</strong> is, I feel very stupid
+                                if I don't use this tool.
                             </p>
                             <h4>Notes</h4>
                             <p>
@@ -179,7 +180,8 @@ export default function Uses() {
                             <p>
                                 I use this tool to edit all the videos in
                                 Parsinta. Previously I did use screensflow, obs,
-                                and until I realized that <strong>D/R</strong> was more powerful.
+                                and until I realized that <strong>D/R</strong>{' '}
+                                was more powerful.
                             </p>
                         </div>
                         <p>
