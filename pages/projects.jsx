@@ -57,12 +57,7 @@ export default function Projects() {
                 title='Projects / Irsyad Notes'
                 url={`https://irsyadnotes.com/projects`}
             />
-            <div
-                className={clsx(
-                    styles.whiteLayoutWithPaddingY,
-                    'mb-4 sm:mb-8 lg:mb-16'
-                )}
-            >
+            <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
                     <div className='mb-4'>
                         <PageTitle>My Projects</PageTitle>
