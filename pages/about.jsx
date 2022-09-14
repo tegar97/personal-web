@@ -17,7 +17,7 @@ export default function About() {
                         <div className='w-full lg:w-2/3'>
                             <PageTitle className='mb-6'>
                                 I’m Irsyad A. Panjaitan. I live in Medan
-                                Indonesia, where I build Parsinta.
+                                Indonesia, where I built Parsinta.
                             </PageTitle>
                             <section className='prose dark:prose-invert lg:prose-lg'>
                                 <p>
