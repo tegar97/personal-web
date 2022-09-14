@@ -5,7 +5,7 @@ import styles from '@/components/styles';
 export default function Articles({ articles }) {
     return articles.map((article) => (
         <Link key={article.slug} href={`/articles/${article.slug}`}>
-            <a className='flex flex-col rounded-xl bg-gray-100 p-4 transition duration-300 hover:bg-gray-50 dark:bg-gray-800/50 dark:hover:bg-gray-800 lg:h-56 lg:p-6'>
+            <a className='flex flex-col rounded-xl bg-gray-100 p-4 transition duration-300 hover:bg-gray-50 dark:bg-gray-800/50 dark:hover:bg-gray-800 lg:h-60 lg:p-6'>
                 <div className='flex-1'>
                     <h4
                         className={clsx(
