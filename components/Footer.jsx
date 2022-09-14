@@ -6,7 +6,7 @@ import styles from './styles';
 
 export default function Footer() {
     return (
-        <div className='border-t border-gray-100 py-10 dark:border-gray-800'>
+        <div className='py-8'>
             <Container>
                 <div className='flex flex-col items-center justify-between gap-4 md:flex-row'>
                     <ul className='flex items-center gap-x-4'>

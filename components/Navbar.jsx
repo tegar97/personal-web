@@ -17,7 +17,7 @@ export default function Navbar() {
                     />
                 </a>
             </Link>
-            <ul className='flex items-center rounded-full bg-white shadow dark:bg-gray-800'>
+            <ul className='flex items-center rounded-full bg-white shadow dark:bg-gray-700/50'>
                 <NavLink href='/about' value='About' />
                 <NavLink href='/articles' value='Articles' />
                 <NavLink href='/projects' value='Projects' />
