@@ -25,7 +25,7 @@ export function ThemeSwitcher() {
     return (
         <button
             onClick={onChange}
-            type='button'
+            type="button"
             className={clsx(
                 styles.flexCenter,
                 'h-9 w-9 rounded-full bg-white shadow dark:bg-gray-700/50 dark:text-white'
@@ -33,11 +33,11 @@ export function ThemeSwitcher() {
         >
             <span>
                 {setting === 'dark' ? (
-                    <IconMoonStars stroke={1} className='h-5 w-5' />
+                    <IconMoonStars stroke={1} className="h-5 w-5" />
                 ) : setting === 'light' ? (
-                    <IconSun stroke={1} className='h-5 w-5' />
+                    <IconSun stroke={1} className="h-5 w-5" />
                 ) : (
-                    <IconDeviceDesktop stroke={1} className='h-5 w-5' />
+                    <IconDeviceDesktop stroke={1} className="h-5 w-5" />
                 )}
             </span>
         </button>

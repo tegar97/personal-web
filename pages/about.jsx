@@ -8,18 +8,18 @@ export default function About() {
     return (
         <>
             <Meta
-                title='About / Irsyad Notes'
-                url='https://irsyadnotes.com/about'
+                title="About / Irsyad Notes"
+                url="https://irsyadnotes.com/about"
             />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
-                    <div className='flex flex-col-reverse gap-10 lg:flex-row'>
-                        <div className='w-full lg:w-2/3'>
-                            <PageTitle className='mb-6'>
+                    <div className="flex flex-col-reverse gap-10 lg:flex-row">
+                        <div className="w-full lg:w-2/3">
+                            <PageTitle className="mb-6">
                                 I’m Irsyad A. Panjaitan. I live in Medan
                                 Indonesia, where I built Parsinta.
                             </PageTitle>
-                            <section className='prose dark:prose-invert lg:prose-lg'>
+                            <section className="prose dark:prose-invert lg:prose-lg">
                                 <p>
                                     There are so many questions where I
                                     currently work, from 2016 to 2 February 2022
@@ -54,7 +54,7 @@ export default function About() {
                                 </p>
                             </section>
                         </div>
-                        <div className='w-full lg:w-1/3'>
+                        <div className="w-full lg:w-1/3">
                             <MyPictureWithSocial />
                         </div>
                     </div>

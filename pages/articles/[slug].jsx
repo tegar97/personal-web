@@ -25,12 +25,12 @@ export default function PostPage({ post }) {
             />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
-                    <div className='relative flex gap-10'>
-                        <div className='w-full lg:w-2/3'>
-                            <PageTitle className='mb-6 max-w-xl pb-2'>
+                    <div className="relative flex gap-10">
+                        <div className="w-full lg:w-2/3">
+                            <PageTitle className="mb-6 max-w-xl pb-2">
                                 {post.meta.title}
                             </PageTitle>
-                            <div className='prose prose-pink max-w-none prose-headings:!mb-2 prose-a:no-underline prose-pre:!rounded-2xl prose-pre:!p-6 dark:prose-invert lg:prose-lg'>
+                            <div className="prose prose-pink prose-headings:!mb-2 prose-a:no-underline prose-pre:!rounded-2xl prose-pre:!p-6 dark:prose-invert lg:prose-lg max-w-none">
                                 <MDXRemote
                                     {...post.source}
                                     components={{ Youtube, Image }}

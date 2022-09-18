@@ -6,15 +6,15 @@ import styles from './styles';
 
 export default function Footer() {
     return (
-        <div className='py-8'>
+        <div className="py-8">
             <Container>
-                <div className='flex flex-col items-center justify-between gap-4 md:flex-row'>
-                    <ul className='flex items-center gap-x-4'>
-                        <NavLink href='/' value='Home' />
-                        <NavLink href='/about' value='About' />
-                        <NavLink href='/articles' value='Articles' />
-                        <NavLink href='/projects' value='Projects' />
-                        <NavLink href='/uses' value='Uses' />
+                <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+                    <ul className="flex items-center gap-x-4">
+                        <NavLink href="/" value="Home" />
+                        <NavLink href="/about" value="About" />
+                        <NavLink href="/articles" value="Articles" />
+                        <NavLink href="/projects" value="Projects" />
+                        <NavLink href="/uses" value="Uses" />
                     </ul>
                     <div className={clsx(styles.textMuted, 'text-right')}>
                         © 2022 Irsyad Notes. All rights reserved.

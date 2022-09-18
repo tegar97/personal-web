@@ -16,7 +16,7 @@ export default function TagPage({ slug, articles }) {
                 title={`${slug} / Irsyad Notes`}
                 url={`https://irsyadnotes.com/articles`}
             />
-            <div className='bg-white'>
+            <div className="bg-white">
                 <Container>
                     <h1>Tag: {slug}</h1>
                     <Articles articles={articles} />

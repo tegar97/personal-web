@@ -8,16 +8,16 @@ export default function Uses() {
     return (
         <>
             <Meta
-                title='Uses / Irsyad Notes'
+                title="Uses / Irsyad Notes"
                 url={`https://irsyadnotes.com/uses`}
             />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
-                    <PageTitle className='mb-6'>
+                    <PageTitle className="mb-6">
                         Software I use, gadgets I love, and other things I
                         recommend.
                     </PageTitle>
-                    <section className='prose dark:prose-invert lg:prose-lg'>
+                    <section className="prose dark:prose-invert lg:prose-lg">
                         <p>
                             I get asked a lot about the things I use to build
                             software, stay productive, or buy to fool myself
@@ -31,7 +31,7 @@ export default function Uses() {
                             work, because I am a teacher at Parsinta, I will
                             also explain everything that happens there.
                         </p>
-                        <div className='lg:ml-6'>
+                        <div className="lg:ml-6">
                             <h4>MacBook Pro M1 (2020)</h4>
                             <p>
                                 For now, the <strong>Apple M1 Chip</strong>{' '}
@@ -72,7 +72,7 @@ export default function Uses() {
                             I feel this is the most part of all, because I care
                             and are very serious about what I am interested in.
                         </p>
-                        <div className='lg:ml-6'>
+                        <div className="lg:ml-6">
                             <h4>Visual Studio Code</h4>
                             <p>
                                 Right now, this is my main text editor, nothing
@@ -137,7 +137,7 @@ export default function Uses() {
                             I feel this is the most part of all, because I care
                             and are very serious about what I am interested in.
                         </p>
-                        <div className='lg:ml-6'>
+                        <div className="lg:ml-6">
                             <h4>Raycast</h4>
                             <p>
                                 Long time with <strong>Alfred</strong>, but

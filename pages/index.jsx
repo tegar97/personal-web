@@ -19,22 +19,22 @@ export default function index({ articles }) {
     return (
         <>
             <Meta
-                title='Irsyad Notes'
+                title="Irsyad Notes"
                 url={`https://irsyadnotes.com/articles`}
             />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
                     <div
-                        id='articles'
-                        className='flex flex-col gap-6 lg:flex-row lg:gap-10'
+                        id="articles"
+                        className="flex flex-col gap-6 lg:flex-row lg:gap-10"
                     >
-                        <div className='w-full lg:w-2/3'>
-                            <div className='mb-6 rounded-2xl bg-gray-100 p-4 dark:bg-gray-800/50 lg:-ml-10 lg:p-10'>
-                                <PageTitle className='mb-3 lg:mb-6'>
+                        <div className="w-full lg:w-2/3">
+                            <div className="mb-6 rounded-2xl bg-gray-100 p-4 dark:bg-gray-800/50 lg:-ml-10 lg:p-10">
+                                <PageTitle className="mb-3 lg:mb-6">
                                     Software I use, gadgets I love, and other
                                     things I recommend.
                                 </PageTitle>
-                                <section className='prose dark:prose-invert lg:prose-lg'>
+                                <section className="prose dark:prose-invert lg:prose-lg">
                                     <p>
                                         I get asked a lot about the things I use
                                         to build software, stay productive, or
@@ -44,15 +44,15 @@ export default function index({ articles }) {
                                         all of my favorite stuff.
                                     </p>
                                 </section>
-                                <div className='mt-6'>
-                                    <Link href='/uses'>
-                                        <a className='5 rounded-full bg-white px-4 py-2 font-semibold shadow dark:bg-gray-700 dark:text-white'>
+                                <div className="mt-6">
+                                    <Link href="/uses">
+                                        <a className="5 rounded-full bg-white px-4 py-2 font-semibold shadow dark:bg-gray-700 dark:text-white">
                                             Read more
                                         </a>
                                     </Link>
                                 </div>
                             </div>
-                            <div className='mb-4'>
+                            <div className="mb-4">
                                 <PageTitle>My Articles</PageTitle>
                                 <p
                                     className={clsx(
@@ -64,11 +64,11 @@ export default function index({ articles }) {
                                     here.
                                 </p>
                             </div>
-                            <div className='flex max-w-xl flex-col'>
+                            <div className="flex max-w-xl flex-col">
                                 <Articles articles={articles} />
                             </div>
                         </div>
-                        <div className='w-full lg:w-1/3'>
+                        <div className="w-full lg:w-1/3">
                             <div
                                 className={clsx(
                                     // styles.flexCenter,
@@ -89,13 +89,13 @@ export default function index({ articles }) {
                                         >
                                             <Icon
                                                 stroke={1}
-                                                className='h-5 w-5'
+                                                className="h-5 w-5"
                                             />
                                         </a>
                                     </Link>
                                 ))}
                             </div>
-                            <div className='mt-4'>
+                            <div className="mt-4">
                                 <ProjectAtHome />
                             </div>
                         </div>
