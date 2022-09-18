@@ -63,7 +63,7 @@ class MyDocument extends Document {
                     <meta name="msapplication-TileColor" content="#ffffff" />
                     <meta name="theme-color" content="#ffffff" />
                 </Head>
-                <body className="font-sans tracking-tight antialiased">
+                <body className="font-sans tracking-tight antialiased bg-gray-100 dark:bg-gray-900 min-h-screen">
                     <Main />
                     <NextScript />
                 </body>
