@@ -17,7 +17,7 @@ export default function Navbar() {
                     />
                 </a>
             </Link>
-            <ul className="overflow-hidden flex lg:px-4 items-center rounded-lg bg-white shadow dark:bg-gray-700/50">
+            <ul className="overflow-hidden flex lg:px-4 items-center rounded-xl bg-white shadow dark:bg-gray-700/50">
                 <NavLink href="/about" value="About" />
                 <NavLink href="/articles" value="Articles" />
                 <NavLink href="/projects" value="Projects" />
