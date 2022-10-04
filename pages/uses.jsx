@@ -73,14 +73,13 @@ export default function Uses() {
                             and are very serious about what I am interested in.
                         </p>
                         <div className="lg:ml-6">
+                            <h4>PHPStorm</h4>
+                            <p>
+                                Starting from October 1st, I will renew my license for the next 1 year, because it seems that I really need it. I said update again, because I've previously used it for 1 year from 2019 - 2020. The theme I'm currently using is <strong>Carbon</strong>.
+                            </p>
                             <h4>Visual Studio Code</h4>
                             <p>
-                                Right now, this is my main text editor, nothing
-                                else but this. Before using this editor, I used
-                                sublime text which was about 6 years old.
-                                Starting from early 2020, I started using visual
-                                studio code and I think, I can be comfortable
-                                here even now.
+                                As of October 1st my main editor is PHPStorm, and going forward I'll probably use it only occasionally. The theme I'm currently using is <strong>Parsinta Request</strong>.
                             </p>
                             <h4>iTerm</h4>
                             <p>
@@ -124,6 +123,10 @@ export default function Uses() {
                                 and the only one. Previously I used{' '}
                                 <strong>Sketch</strong>, but you know it's not
                                 free. But Figma do.
+                            </p>
+                            <h4>Canva</h4>
+                            <p>
+                                Since I'm not a good graphic designer, I think I need this software
                             </p>
                             <h4>Browser</h4>
                             <p>
