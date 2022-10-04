@@ -11,15 +11,15 @@ export default function NavLink({ href, value, children }) {
             <Link href={href}>
                 <a
                     className={clsx(
-                        router.asPath == href
+                        router.asPath === href
                             ? 'text-black dark:text-white'
                             : styles.textMuted,
-                        'inline-flex px-3 relative py-2 text-sm justify-center font-medium lg:px-4'
+                        'inline-flex px-3 relative py-2 md:py-3 text-sm justify-center font-medium lg:px-4'
                     )}
                 >
                     {value || children}
 
-                    {router.asPath == href && (
+                    {router.asPath === href && (
                         <span
                             className={clsx(
                                 'h-px w-full absolute bottom-[-0.5px] bg-gradient-to-r from-transparent dark:via-rose-500/40 via-rose-500/50 to-transparent'
