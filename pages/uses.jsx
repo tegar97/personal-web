@@ -75,11 +75,18 @@ export default function Uses() {
                         <div className="lg:ml-6">
                             <h4>PHPStorm</h4>
                             <p>
-                                Starting from October 1st, I will renew my license for the next 1 year, because it seems that I really need it. I said update again, because I've previously used it for 1 year from 2019 - 2020. The theme I'm currently using is <strong>Carbon</strong>.
+                                Starting from October 1st, I will renew my license for the next 1 year ($99), because it seems that I really need it. I said update again, because I've previously used it for 1 year from 2019 - 2020. The theme I'm currently using is <strong>Carbon</strong>.
                             </p>
                             <h4>Visual Studio Code</h4>
                             <p>
                                 As of October 1st my main editor is PHPStorm, and going forward I'll probably use it only occasionally. The theme I'm currently using is <strong>Parsinta Request</strong>.
+                            </p>
+                            <h4>The font I use</h4>
+                            <p>
+                                <ol>
+                                    <li>Dank Mono ($24)</li>
+                                    <li>Sligoil (Free)</li>
+                                </ol>
                             </p>
                             <h4>iTerm</h4>
                             <p>
