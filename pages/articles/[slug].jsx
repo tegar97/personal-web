@@ -16,6 +16,7 @@ import PageTitle from '@/components/PageTitle';
 import Container from '@/components/Container';
 import styles from '@/components/styles';
 import Meta from '@/components/Meta';
+import clsx from 'clsx';
 export default function PostPage({ post }) {
     return (
         <>
@@ -25,16 +26,23 @@ export default function PostPage({ post }) {
             />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
-                    <div className='relative flex gap-10'>
-                        <div className='w-full lg:w-2/3'>
-                            <PageTitle className='mb-6 max-w-xl pb-2'>
+                    <div className="relative flex gap-10">
+                        <div className="w-full lg:w-2/3">
+                            <PageTitle className="mb-6 max-w-xl pb-2">
                                 {post.meta.title}
                             </PageTitle>
-                            <div className='prose prose-pink max-w-none prose-headings:!mb-2 prose-a:no-underline prose-pre:!rounded-2xl prose-pre:!p-6 dark:prose-invert lg:prose-lg'>
+                            <div className="prose prose-pink prose-headings:!mb-2 prose-a:no-underline prose-pre:!rounded-2xl prose-pre:!p-6 dark:prose-invert lg:prose-lg max-w-none">
                                 <MDXRemote
                                     {...post.source}
                                     components={{ Youtube, Image }}
                                 />
+
+                                <div className={clsx(
+                                    styles.textInvert,
+                                    'border dark:border-transparent dark:bg-black/40 font-medium p-4 rounded-xl'
+                                )}>
+                                    Find some typo, just make the pull request on <a className={styles.textGradient} href="http://github.com/irsyadadl/irsyadnotes.com" target="_blank" rel="noopener noreferrer">Github</a>.
+                                </div>
                             </div>
                         </div>
                     </div>

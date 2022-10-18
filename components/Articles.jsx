@@ -5,8 +5,8 @@ import styles from '@/components/styles';
 export default function Articles({ articles }) {
     return articles.map((article) => (
         <Link key={article.slug} href={`/articles/${article.slug}`}>
-            <a className='-ml-6 rounded-xl p-6 transition duration-300 hover:bg-gray-50 dark:hover:bg-gray-800'>
-                <div className='flex-1'>
+            <a className="-ml-6 rounded-xl p-6 transition duration-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                <div className="flex-1">
                     <h4
                         className={clsx(
                             styles.textGradient,
@@ -20,7 +20,7 @@ export default function Articles({ articles }) {
                     </span>
                 </div>
 
-                <strong className='mt-4 block font-semibold'>Read more</strong>
+                <strong className="mt-4 block font-semibold">Read more</strong>
             </a>
         </Link>
     ));

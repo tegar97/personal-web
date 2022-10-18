@@ -8,16 +8,16 @@ export default function Uses() {
     return (
         <>
             <Meta
-                title='Uses / Irsyad Notes'
+                title="Uses / Irsyad Notes"
                 url={`https://irsyadnotes.com/uses`}
             />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
-                    <PageTitle className='mb-6'>
+                    <PageTitle className="mb-6">
                         Software I use, gadgets I love, and other things I
                         recommend.
                     </PageTitle>
-                    <section className='prose dark:prose-invert lg:prose-lg'>
+                    <section className="prose dark:prose-invert lg:prose-lg">
                         <p>
                             I get asked a lot about the things I use to build
                             software, stay productive, or buy to fool myself
@@ -31,7 +31,7 @@ export default function Uses() {
                             work, because I am a teacher at Parsinta, I will
                             also explain everything that happens there.
                         </p>
-                        <div className='lg:ml-6'>
+                        <div className="lg:ml-6">
                             <h4>MacBook Pro M1 (2020)</h4>
                             <p>
                                 For now, the <strong>Apple M1 Chip</strong>{' '}
@@ -72,15 +72,21 @@ export default function Uses() {
                             I feel this is the most part of all, because I care
                             and are very serious about what I am interested in.
                         </p>
-                        <div className='lg:ml-6'>
+                        <div className="lg:ml-6">
+                            <h4>PHPStorm</h4>
+                            <p>
+                                Starting from October 1st, I will renew my license for the next 1 year ($99), because it seems that I really need it. I said update again, because I've previously used it for 1 year from 2019 - 2020. The theme I'm currently using is <strong>Carbon</strong>.
+                            </p>
                             <h4>Visual Studio Code</h4>
                             <p>
-                                Right now, this is my main text editor, nothing
-                                else but this. Before using this editor, I used
-                                sublime text which was about 6 years old.
-                                Starting from early 2020, I started using visual
-                                studio code and I think, I can be comfortable
-                                here even now.
+                                As of October 1st my main editor is PHPStorm, and going forward I'll probably use it only occasionally. The theme I'm currently using is <strong>Parsinta Request</strong>.
+                            </p>
+                            <h4>The font I use</h4>
+                            <p>
+                                <ol>
+                                    <li>Dank Mono ($24)</li>
+                                    <li>Sligoil (Free)</li>
+                                </ol>
                             </p>
                             <h4>iTerm</h4>
                             <p>
@@ -125,6 +131,10 @@ export default function Uses() {
                                 <strong>Sketch</strong>, but you know it's not
                                 free. But Figma do.
                             </p>
+                            <h4>Canva</h4>
+                            <p>
+                                Since I'm not a good graphic designer, I think I need this software
+                            </p>
                             <h4>Browser</h4>
                             <p>
                                 For work I use <strong>Firefox</strong>, and if
@@ -137,12 +147,13 @@ export default function Uses() {
                             I feel this is the most part of all, because I care
                             and are very serious about what I am interested in.
                         </p>
-                        <div className='lg:ml-6'>
+                        <div className="lg:ml-6">
                             <h4>Raycast</h4>
                             <p>
-                                Long time with <strong>Alfred</strong>, but since I know
-                                how amazing <strong>Raycast</strong> is, I feel very stupid if I
-                                don't use this tool.
+                                Long time with <strong>Alfred</strong>, but
+                                since I know how amazing{' '}
+                                <strong>Raycast</strong> is, I feel very stupid
+                                if I don't use this tool.
                             </p>
                             <h4>Notes</h4>
                             <p>
@@ -179,7 +190,8 @@ export default function Uses() {
                             <p>
                                 I use this tool to edit all the videos in
                                 Parsinta. Previously I did use screensflow, obs,
-                                and until I realized that <strong>D/R</strong> was more powerful.
+                                and until I realized that <strong>D/R</strong>{' '}
+                                was more powerful.
                             </p>
                         </div>
                         <p>

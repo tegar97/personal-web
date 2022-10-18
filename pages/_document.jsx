@@ -21,49 +21,49 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html className='dark scroll-smooth'>
+            <Html className="dark scroll-smooth">
                 <Head>
                     <link
-                        rel='preconnect'
-                        href='https://fonts.googleapis.com'
+                        rel="preconnect"
+                        href="https://fonts.googleapis.com"
                     />
                     <link
-                        rel='preconnect'
-                        href='https://fonts.gstatic.com'
-                        crossOrigin='true'
+                        rel="preconnect"
+                        href="https://fonts.gstatic.com"
+                        crossOrigin="true"
                     />
                     <link
-                        href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@400;500;600;700&display=swap'
-                        rel='stylesheet'
-                    />
-
-                    <link
-                        rel='apple-touch-icon'
-                        sizes='180x180'
-                        href='/favicon/apple-touch-icon.png'
+                        href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@400;500;600;700&display=swap"
+                        rel="stylesheet"
                     />
                     <link
-                        rel='icon'
-                        type='image/png'
-                        sizes='32x32'
-                        href='/favicon/favicon-32x32.png'
+                        rel="apple-touch-icon"
+                        sizes="180x180"
+                        href="/favicon/apple-touch-icon.png?v=1"
                     />
                     <link
-                        rel='icon'
-                        type='image/png'
-                        sizes='16x16'
-                        href='/favicon/favicon-16x16.png'
+                        rel="icon"
+                        type="image/png"
+                        sizes="32x32"
+                        href="/favicon/favicon-32x32.png?v=1"
                     />
-                    <link rel='manifest' href='/favicon/site.webmanifest' />
                     <link
-                        rel='mask-icon'
-                        href='/favicon/safari-pinned-tab.svg'
-                        color='#5bbad5'
+                        rel="icon"
+                        type="image/png"
+                        sizes="16x16"
+                        href="/favicon/favicon-16x16.png?v=1"
                     />
-                    <meta name='msapplication-TileColor' content='#ffffff' />
-                    <meta name='theme-color' content='#ffffff' />
+                    <link rel="manifest" href="/favicon/site.webmanifest?v=1" />
+                    <link
+                        rel="mask-icon"
+                        href="/favicon/safari-pinned-tab.svg?v=1"
+                        color="#5bbad5"
+                    />
+                    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1" />
+                    <meta name="msapplication-TileColor" content="#ffffff" />
+                    <meta name="theme-color" content="#ffffff" />
                 </Head>
-                <body className='font-sans tracking-tight antialiased'>
+                <body className="font-sans tracking-tight antialiased bg-gray-100 dark:bg-gray-900 min-h-screen">
                     <Main />
                     <NextScript />
                 </body>

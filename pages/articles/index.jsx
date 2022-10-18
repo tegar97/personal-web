@@ -15,23 +15,18 @@ export default function index({ articles }) {
     return (
         <>
             <Meta
-                title='Articles / Irsyad Notes'
+                title="Articles / Irsyad Notes"
                 url={`https://irsyadnotes.com/articles`}
             />
-            <div
-                className={clsx(
-                    styles.whiteLayoutWithPaddingY,
-                    'mb-4 sm:mb-8 lg:mb-16'
-                )}
-            >
+            <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
-                    <div className='mb-4'>
+                    <div className="mb-4">
                         <PageTitle>My Articles</PageTitle>
                         <p className={clsx(styles.textMuted, 'mt-2 text-xl')}>
                             Everything that is on my mind, I will write here.
                         </p>
                     </div>
-                    <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-10'>
+                    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-10">
                         <ArticlesGrid articles={articles} />
                     </div>
                 </Container>
