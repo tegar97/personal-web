@@ -17,6 +17,7 @@ import Container from '@/components/Container';
 import styles from '@/components/styles';
 import Meta from '@/components/Meta';
 import clsx from 'clsx';
+
 export default function PostPage({ post }) {
     return (
         <>
@@ -37,11 +38,23 @@ export default function PostPage({ post }) {
                                     components={{ Youtube, Image }}
                                 />
 
-                                <div className={clsx(
-                                    styles.textInvert,
-                                    'border dark:border-transparent dark:bg-black/40 font-medium p-4 rounded-xl'
-                                )}>
-                                    Find some typo, just make the pull request on <a className={styles.textGradient} href="http://github.com/irsyadadl/irsyadnotes.com" target="_blank" rel="noopener noreferrer">Github</a>.
+                                <div
+                                    className={clsx(
+                                        styles.textInvert,
+                                        'rounded-xl border p-4 font-medium dark:border-transparent dark:bg-black/40'
+                                    )}
+                                >
+                                    Find some typo, just make the pull request
+                                    on{' '}
+                                    <a
+                                        className={styles.textGradient}
+                                        href="http://github.com/irsyadadl/irsyadnotes.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Github
+                                    </a>
+                                    .
                                 </div>
                             </div>
                         </div>

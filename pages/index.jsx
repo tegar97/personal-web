@@ -8,7 +8,6 @@ import { POSTS_PATH } from '@/libs/helpers';
 import Articles from '@/components/Articles';
 import PageTitle from '@/components/PageTitle';
 import ProjectAtHome from '@/components/ProjectAtHome';
-import Head from 'next/head';
 import Container from '@/components/Container';
 import styles from '@/components/styles';
 import clsx from 'clsx';
@@ -45,10 +44,11 @@ export default function index({ articles }) {
                                     </p>
                                 </section>
                                 <div className="mt-6">
-                                    <Link href="/uses">
-                                        <a className="5 rounded-full bg-white px-4 py-2 font-semibold shadow dark:bg-gray-700 dark:text-white">
-                                            Read more
-                                        </a>
+                                    <Link
+                                        href="/uses"
+                                        className="5 rounded-full bg-white px-4 py-2 font-semibold shadow dark:bg-gray-700 dark:text-white"
+                                    >
+                                        Read more
                                     </Link>
                                 </div>
                             </div>
@@ -80,18 +80,15 @@ export default function index({ articles }) {
                                     Follow me ⎯⎯⎯⎯
                                 </span>
                                 {socials.map(({ url, icon: Icon }, i) => (
-                                    <Link href={url} key={i}>
-                                        <a
-                                            className={clsx(
-                                                styles.flexCenter,
-                                                'h-8 w-8 rounded-full bg-gray-100 dark:bg-gray-800'
-                                            )}
-                                        >
-                                            <Icon
-                                                stroke={1}
-                                                className="h-5 w-5"
-                                            />
-                                        </a>
+                                    <Link
+                                        href={url}
+                                        key={i}
+                                        className={clsx(
+                                            styles.flexCenter,
+                                            'h-8 w-8 rounded-full bg-gray-100 dark:bg-gray-800'
+                                        )}
+                                    >
+                                        <Icon stroke={1} className="h-5 w-5" />
                                     </Link>
                                 ))}
                             </div>

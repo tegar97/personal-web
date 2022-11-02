@@ -2,6 +2,7 @@ import { IconBriefcase } from '@tabler/icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+
 const projects = [
     {
         name: 'Parsinta Exclusive',
@@ -24,8 +25,7 @@ const projects = [
     {
         name: 'irsyadadl/inertia.ts',
         icon: '/images/projects/inertia.svg',
-        description:
-            'Inertia React with Typescript implementation.',
+        description: 'Inertia React with Typescript implementation.',
         url: 'https://github.com/irsyadadl/inertia.ts',
     },
     {
@@ -71,10 +71,11 @@ export default function ProjectAtHome() {
                     </li>
                 ))}
             </ol>
-            <Link href="/projects">
-                <a className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white py-2 px-3 text-sm font-semibold text-gray-900 shadow outline-offset-2 transition hover:bg-gray-50 active:bg-gray-100 active:text-gray-900/60 active:transition-none dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-50 dark:active:bg-gray-700/50 dark:active:text-gray-50/70">
-                    View more
-                </a>
+            <Link
+                href="/projects"
+                className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white py-2 px-3 text-sm font-semibold text-gray-900 shadow outline-offset-2 transition hover:bg-gray-50 active:bg-gray-100 active:text-gray-900/60 active:transition-none dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-50 dark:active:bg-gray-700/50 dark:active:text-gray-50/70"
+            >
+                View more
             </Link>
         </div>
     );
