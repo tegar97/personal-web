@@ -126,7 +126,7 @@ export default function Uses() {
                                 $19/mo, but I think it's useless for now, so I
                                 downgrade.
                             </p>
-                            <h4>Analytics</h4>
+                            <h4>Fathom Analytics</h4>
                             <p>
                                 To see what's happening on all the websites I
                                 have, I use{' '}
