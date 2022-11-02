@@ -10,16 +10,29 @@ const projects = [
         url: 'https://parsinta.com/s/psnth',
     },
     {
-        name: 'React starter',
-        icon: '/images/projects/react.svg',
-        description: "It's a react starter project with tailwind css.",
-        url: 'https://github.com/teamparsinta/react-starter',
-    },
-    {
         name: 'Laravel Ebook',
         icon: '/images/projects/books.svg',
         description: 'Learn laravel from scracth.',
         url: 'https://parsinta.com/s/elrvl',
+    },
+    {
+        name: 'Irsyad Notes',
+        icon: '/images/projects/nextjs.svg',
+        description: 'The site you are currently visiting.',
+        url: 'https://github.com/irsyadadl/irsyadnotes.com',
+    },
+    {
+        name: 'irsyadadl/inertia.ts',
+        icon: '/images/projects/inertia.svg',
+        description:
+            'Inertia React with Typescript implementation.',
+        url: 'https://github.com/irsyadadl/inertia.ts',
+    },
+    {
+        name: 'React starter',
+        icon: '/images/projects/react.svg',
+        description: "It's a react starter project with tailwind css.",
+        url: 'https://github.com/irsyadadl/react-starter',
     },
 ];
 export default function ProjectAtHome() {
@@ -34,7 +47,7 @@ export default function ProjectAtHome() {
                     <li key={i} className="flex gap-4">
                         <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 dark:border dark:border-gray-700/50 dark:bg-gray-800 dark:ring-0">
                             <Image
-                                alt=""
+                                alt={project.name}
                                 src={project.icon}
                                 decoding="async"
                                 data-nimg="future"
