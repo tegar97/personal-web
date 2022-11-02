@@ -126,6 +126,19 @@ export default function Uses() {
                                 $19/mo, but I think it's useless for now, so I
                                 downgrade.
                             </p>
+                            <h4>Analytics</h4>
+                            <p>
+                                To see what's happening on all the websites I
+                                have, I use{' '}
+                                <a
+                                    target="_blank"
+                                    href="https://usefathom.com/ref/JPAHJA"
+                                    rel="noreferrer"
+                                >
+                                    Fathom analytics
+                                </a>
+                                . $140 / year I think is better than nothing.
+                            </p>
                             <h4>Amazon S3</h4>
                             <p>
                                 I won't talk much about this issue, because I
