@@ -75,11 +75,19 @@ export default function Uses() {
                         <div className="lg:ml-6">
                             <h4>PHPStorm</h4>
                             <p>
-                                Starting from October 1st, I will renew my license for the next 1 year ($99), because it seems that I really need it. I said update again, because I've previously used it for 1 year from 2019 - 2020. The theme I'm currently using is <strong>Carbon</strong>.
+                                Starting from October 1st, I will renew my
+                                license for the next 1 year ($99), because it
+                                seems that I really need it. I said update
+                                again, because I've previously used it for 1
+                                year from 2019 - 2020. The theme I'm currently
+                                using is <strong>Carbon</strong>.
                             </p>
                             <h4>Visual Studio Code</h4>
                             <p>
-                                As of October 1st my main editor is PHPStorm, and going forward I'll probably use it only occasionally. The theme I'm currently using is <strong>Parsinta Request</strong>.
+                                As of October 1st my main editor is PHPStorm,
+                                and going forward I'll probably use it only
+                                occasionally. The theme I'm currently using is{' '}
+                                <strong>Parsinta Request</strong>.
                             </p>
                             <h4>The font I use</h4>
                             <p>
@@ -118,6 +126,15 @@ export default function Uses() {
                                 $19/mo, but I think it's useless for now, so I
                                 downgrade.
                             </p>
+                            <h4>Fathom Analytics</h4>
+                            <p>
+                                To see what's happening on all the websites I
+                                have, I use{' '}
+                                <a href="https://usefathom.com/ref/JPAHJA" >
+                                    Fathom analytics
+                                </a>
+                                . $140 / year I think is better than nothing.
+                            </p>
                             <h4>Amazon S3</h4>
                             <p>
                                 I won't talk much about this issue, because I
@@ -133,7 +150,8 @@ export default function Uses() {
                             </p>
                             <h4>Canva</h4>
                             <p>
-                                Since I'm not a good graphic designer, I think I need this software
+                                Since I'm not a good graphic designer, I think I
+                                need this software
                             </p>
                             <h4>Browser</h4>
                             <p>

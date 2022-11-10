@@ -15,11 +15,13 @@ export default function MyPictureWithSocial() {
 
             <div className="mt-8 space-y-4">
                 {socials.map(({ name, url, icon: Icon }, i) => (
-                    <Link key={i} href={url}>
-                        <a className="flex items-center gap-x-2">
-                            <Icon stroke={1} className="h-5 w-5" />
-                            {name}
-                        </a>
+                    <Link
+                        key={i}
+                        href={url}
+                        className="flex items-center gap-x-2"
+                    >
+                        <Icon stroke={1} className="h-5 w-5" />
+                        {name}
                     </Link>
                 ))}
             </div>

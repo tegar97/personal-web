@@ -28,8 +28,8 @@ export default function Footer() {
 function NavLink({ href, value, children }) {
     return (
         <li>
-            <Link href={href}>
-                <a className={styles.textMuted}>{value || children}</a>
+            <Link href={href} className={styles.textMuted}>
+                {value || children}
             </Link>
         </li>
     );

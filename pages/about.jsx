@@ -4,6 +4,7 @@ import MyPictureWithSocial from '@/components/MyPictureWithSocial';
 import Container from '@/components/Container';
 import styles from '@/components/styles';
 import Meta from '@/components/Meta';
+
 export default function About() {
     return (
         <>

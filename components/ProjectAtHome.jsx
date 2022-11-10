@@ -2,6 +2,7 @@ import { IconBriefcase } from '@tabler/icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+
 const projects = [
     {
         name: 'Parsinta Exclusive',
@@ -10,16 +11,28 @@ const projects = [
         url: 'https://parsinta.com/s/psnth',
     },
     {
-        name: 'React starter',
-        icon: '/images/projects/react.svg',
-        description: "It's a react starter project with tailwind css.",
-        url: 'https://github.com/teamparsinta/react-starter',
-    },
-    {
         name: 'Laravel Ebook',
         icon: '/images/projects/books.svg',
         description: 'Learn laravel from scracth.',
         url: 'https://parsinta.com/s/elrvl',
+    },
+    {
+        name: 'Irsyad Notes',
+        icon: '/images/projects/nextjs.svg',
+        description: 'The site you are currently visiting.',
+        url: 'https://github.com/irsyadadl/irsyadnotes.com',
+    },
+    {
+        name: 'irsyadadl/inertia.ts',
+        icon: '/images/projects/inertia.svg',
+        description: 'Inertia React with Typescript implementation.',
+        url: 'https://github.com/irsyadadl/inertia.ts',
+    },
+    {
+        name: 'React starter',
+        icon: '/images/projects/react.svg',
+        description: "It's a react starter project with tailwind css.",
+        url: 'https://github.com/irsyadadl/react-starter',
     },
 ];
 export default function ProjectAtHome() {
@@ -34,7 +47,7 @@ export default function ProjectAtHome() {
                     <li key={i} className="flex gap-4">
                         <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 dark:border dark:border-gray-700/50 dark:bg-gray-800 dark:ring-0">
                             <Image
-                                alt=""
+                                alt={project.name}
                                 src={project.icon}
                                 decoding="async"
                                 data-nimg="future"
@@ -58,10 +71,11 @@ export default function ProjectAtHome() {
                     </li>
                 ))}
             </ol>
-            <Link href="/projects">
-                <a className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white py-2 px-3 text-sm font-semibold text-gray-900 shadow outline-offset-2 transition hover:bg-gray-50 active:bg-gray-100 active:text-gray-900/60 active:transition-none dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-50 dark:active:bg-gray-700/50 dark:active:text-gray-50/70">
-                    View more
-                </a>
+            <Link
+                href="/projects"
+                className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white py-2 px-3 text-sm font-semibold text-gray-900 shadow outline-offset-2 transition hover:bg-gray-50 active:bg-gray-100 active:text-gray-900/60 active:transition-none dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-50 dark:active:bg-gray-700/50 dark:active:text-gray-50/70"
+            >
+                View more
             </Link>
         </div>
     );

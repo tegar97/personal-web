@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Articles from '@/components/Articles';
 import React from 'react';
 import path from 'path';

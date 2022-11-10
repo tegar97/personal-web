@@ -5,6 +5,7 @@ import styles from '@/components/styles';
 import clsx from 'clsx';
 import Image from 'next/image';
 import React from 'react';
+
 const projects = [
     {
         name: 'Parsinta Exclusive',
@@ -16,13 +17,13 @@ const projects = [
         name: 'React starter',
         icon: '/images/projects/react.svg',
         description: "It's a react starter project with tailwind css.",
-        url: 'https://github.com/teamparsinta/react-starter',
+        url: 'https://github.com/irsyadadl/react-starter',
     },
     {
         name: 'Laravel Ebook',
         icon: '/images/projects/books.svg',
         description: 'Learn laravel from scracth.',
-        url: 'https://parsinta.com/s/elrvl',
+        url: 'https://parsinta.com/s/elrvl?ref=irsyadnotes.com',
     },
     {
         name: 'irsyadadl/libr',
@@ -36,6 +37,12 @@ const projects = [
         description:
             'Fence is a package for authentication views using Laravel fortify.',
         url: 'https://github.com/irsyadadl/fence',
+    },
+    {
+        name: 'irsyadadl/inertia.ts',
+        icon: '/images/projects/inertia.svg',
+        description: 'Inertia React with Typescript implementation.',
+        url: 'https://github.com/irsyadadl/inertia.ts',
     },
     {
         name: 'Irsyad Notes',
@@ -66,10 +73,16 @@ export default function Projects() {
                             projects on github.
                         </p>
                     </div>
-                    <ol className="mt-6 max-w-xl space-y-4 rounded-2xl bg-gray-100 p-6 dark:bg-gray-800/50">
+                    <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 ">
                         {projects.map((project, i) => (
-                            <li className="flex gap-4" key={i}>
-                                <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 dark:border dark:border-gray-700/50 dark:bg-gray-800 dark:ring-0">
+                            <a
+                                href={project.url}
+                                target="_blank"
+                                className="flex h-28 items-start gap-4 rounded-2xl bg-gray-100 p-6 dark:bg-gray-800/90"
+                                key={i}
+                                rel="noreferrer"
+                            >
+                                <div className="relative -mt-0.5 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-white shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 dark:border dark:border-gray-700/50 dark:bg-gray-900/50 dark:ring-0">
                                     <Image
                                         alt=""
                                         src={project.icon}
@@ -102,9 +115,9 @@ export default function Projects() {
                                         {project.description}
                                     </dd>
                                 </dl>
-                            </li>
+                            </a>
                         ))}
-                    </ol>
+                    </div>
                 </Container>
             </div>
         </>

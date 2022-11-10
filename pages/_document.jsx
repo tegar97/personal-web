@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -63,7 +63,7 @@ class MyDocument extends Document {
                     <meta name="msapplication-TileColor" content="#ffffff" />
                     <meta name="theme-color" content="#ffffff" />
                 </Head>
-                <body className="font-sans tracking-tight antialiased bg-gray-100 dark:bg-gray-900 min-h-screen">
+                <body className="min-h-screen bg-gray-100 font-sans tracking-tight antialiased dark:bg-gray-900">
                     <Main />
                     <NextScript />
                 </body>
