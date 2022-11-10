@@ -130,11 +130,7 @@ export default function Uses() {
                             <p>
                                 To see what's happening on all the websites I
                                 have, I use{' '}
-                                <a
-                                    target="_blank"
-                                    href="https://usefathom.com/ref/JPAHJA"
-                                    rel="noreferrer"
-                                >
+                                <a href="https://usefathom.com/ref/JPAHJA" >
                                     Fathom analytics
                                 </a>
                                 . $140 / year I think is better than nothing.

@@ -6,6 +6,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
+git clone https://github.com/irsyadadl/irsyadnotes.com.git 'portfolio'
+cd portfolio
 npm i && npm run dev
 ```
 
