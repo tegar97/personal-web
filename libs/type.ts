@@ -1,4 +1,4 @@
-import React, { MapHTMLAttributes } from 'react';
+import React from 'react';
 export interface NavLinkProps {
     href: string;
     value: string;

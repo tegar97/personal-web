@@ -1,7 +1,6 @@
 import { socials } from '@/libs/socials';
 import Image from 'next/image';
 import React from 'react';
-import { TablerIcon } from '@tabler/icons';
 import Link from 'next/link';
 
 export default function MyPictureWithSocial() {

@@ -1,6 +1,6 @@
-import '../styles/globals.css';
+import '@/styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
-import Layout from '../components/Layout';
+import Layout from '@/components/Layout';
 import { AppProps } from 'next/app';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
