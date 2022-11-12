@@ -1,55 +1,47 @@
-import Articles from '@/components/Articles';
 import React from 'react';
 import path from 'path';
 import fs from 'fs';
 import { sync } from 'glob';
 import matter from 'gray-matter';
 import { POSTS_PATH } from '@/libs/helpers';
+import ArticlesGrid from '@/components/ArticlesGrid';
+import PageTitle from '@/components/PageTitle';
 import Container from '@/components/Container';
+import clsx from 'clsx';
+import styles from '@/components/styles';
 import Meta from '@/components/Meta';
+import { ArticleProps } from '@/libs/type';
 
-export default function TagPage({ slug, articles }) {
+export default function index({ articles }: { articles: ArticleProps }) {
     return (
         <>
-            <Meta
-                title={`${slug} / Irsyad Notes`}
-                url={`https://irsyadnotes.com/articles`}
-            />
-            <div className="bg-white">
+            <Meta title='Articles / Irsyad Notes' url={`https://irsyadnotes.com/articles`} />
+            <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
-                    <h1>Tag: {slug}</h1>
-                    <Articles articles={articles} />
+                    <div className='mb-4'>
+                        <PageTitle>My Articles</PageTitle>
+                        <p className={clsx(styles.textMuted, 'mt-2 text-xl')}>
+                            Everything that is on my mind, I will write here.
+                        </p>
+                    </div>
+                    <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-10'>
+                        <ArticlesGrid articles={articles} />
+                    </div>
                 </Container>
             </div>
         </>
     );
 }
 
-export const getStaticProps = async ({ params }) => {
-    const { slug } = params;
-    const posts = getArticles().filter((post) => post.meta.tags.includes(slug));
-
+export async function getStaticProps() {
     return {
         props: {
-            slug,
-            articles: posts.map((post) => post.meta),
+            articles: getArticles()
+                .slice(0, 9)
+                .map((post) => post.meta),
         },
     };
-};
-
-export const getStaticPaths = async () => {
-    const tags = new Set(
-        getArticles()
-            .map((post) => post.meta.tags)
-            .flat()
-    );
-    const paths = Array.from(tags).map((tag) => ({ params: { slug: tag } }));
-
-    return {
-        paths,
-        fallback: false,
-    };
-};
+}
 
 const getSlugs = () => {
     const paths = sync(`${POSTS_PATH}/*.mdx`);
@@ -62,7 +54,7 @@ const getSlugs = () => {
     });
 };
 
-const getPostFromSlug = (slug) => {
+const getPostFromSlug = (slug: string) => {
     const postPath = path.join(POSTS_PATH, `${slug}.mdx`);
     const source = fs.readFileSync(postPath);
     const { content, data } = matter(source);

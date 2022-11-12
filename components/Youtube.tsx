@@ -1,0 +1,14 @@
+import { YoutubeProps } from '@/libs/type';
+
+export default function Youtube({ id }: YoutubeProps) {
+    return (
+        <div className='relative h-0 w-full max-w-full overflow-hidden rounded-xl pb-[56.25%]'>
+            <iframe
+                src={`https://www.youtube.com/embed/${id}`}
+                allow='autoplay; encrypted-media'
+                title='Embedded YouTube video'
+                className='absolute top-0 left-0 h-full w-full border-0'
+            />
+        </div>
+    );
+}

@@ -17,8 +17,9 @@ import Container from '@/components/Container';
 import styles from '@/components/styles';
 import Meta from '@/components/Meta';
 import clsx from 'clsx';
+import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 
-export default function PostPage({ post }) {
+export default function PostPage({ post }: { post: any }) {
     return (
         <>
             <Meta
@@ -27,31 +28,23 @@ export default function PostPage({ post }) {
             />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
-                    <div className="relative flex gap-10">
-                        <div className="w-full lg:w-2/3">
-                            <PageTitle className="mb-6 max-w-xl pb-2">
-                                {post.meta.title}
-                            </PageTitle>
-                            <div className="prose prose-pink prose-headings:!mb-2 prose-a:no-underline prose-pre:!rounded-2xl prose-pre:!p-6 dark:prose-invert lg:prose-lg max-w-none">
-                                <MDXRemote
-                                    {...post.source}
-                                    components={{ Youtube, Image }}
-                                />
+                    <div className='relative flex gap-10'>
+                        <div className='w-full lg:w-2/3'>
+                            <PageTitle className='mb-6 max-w-xl pb-2'>{post.meta.title}</PageTitle>
+                            <div className='prose prose-pink max-w-none prose-headings:!mb-2 prose-a:no-underline prose-pre:!rounded-2xl prose-pre:!p-6 dark:prose-invert lg:prose-lg'>
+                                <MDXRemote {...post.source} components={{ Youtube, Image }} />
 
                                 <div
                                     className={clsx(
                                         styles.textInvert,
                                         'rounded-xl border p-4 font-medium dark:border-transparent dark:bg-black/40'
-                                    )}
-                                >
-                                    Find some typo, just make the pull request
-                                    on{' '}
+                                    )}>
+                                    Find some typo, just make the pull request on{' '}
                                     <a
                                         className={styles.textGradient}
-                                        href="http://github.com/irsyadadl/irsyadnotes.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
+                                        href='http://github.com/irsyadadl/irsyadnotes.com'
+                                        target='_blank'
+                                        rel='noopener noreferrer'>
                                         Github
                                     </a>
                                     .
@@ -65,7 +58,7 @@ export default function PostPage({ post }) {
     );
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params }: Params) => {
     const { slug } = params;
     const { content, meta } = getPostFromSlug(slug);
     const mdxSource = await serialize(content, {
@@ -91,7 +84,7 @@ export const getStaticPaths = async () => {
     };
 };
 
-const getPostFromSlug = (slug) => {
+const getPostFromSlug = (slug: string) => {
     const postPath = path.join(POSTS_PATH, `${slug}.mdx`);
     const source = fs.readFileSync(postPath);
     const { content, data } = matter(source);

@@ -13,72 +13,54 @@ import styles from '@/components/styles';
 import clsx from 'clsx';
 import Link from 'next/link';
 import Meta from '@/components/Meta';
+import { ArticleProps } from '@/libs/type';
 
-export default function index({ articles }) {
+export default function index({ articles }: { articles: ArticleProps }) {
     return (
         <>
-            <Meta
-                title="Irsyad Notes"
-                url={`https://irsyadnotes.com/articles`}
-            />
+            <Meta title='Irsyad Notes' url={`https://irsyadnotes.com/articles`} />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
-                    <div
-                        id="articles"
-                        className="flex flex-col gap-6 lg:flex-row lg:gap-10"
-                    >
-                        <div className="w-full lg:w-2/3">
-                            <div className="mb-6 rounded-2xl bg-gray-100 p-4 dark:bg-gray-800/50 lg:-ml-10 lg:p-10">
-                                <PageTitle className="mb-3 lg:mb-6">
-                                    Software I use, gadgets I love, and other
-                                    things I recommend.
+                    <div id='articles' className='flex flex-col gap-6 lg:flex-row lg:gap-10'>
+                        <div className='w-full lg:w-2/3'>
+                            <div className='mb-6 rounded-2xl bg-gray-100 p-4 dark:bg-gray-800/50 lg:-ml-10 lg:p-10'>
+                                <PageTitle className='mb-3 lg:mb-6'>
+                                    Software I use, gadgets I love, and other things I recommend.
                                 </PageTitle>
-                                <section className="prose dark:prose-invert lg:prose-lg">
+                                <section className='prose dark:prose-invert lg:prose-lg'>
                                     <p>
-                                        I get asked a lot about the things I use
-                                        to build software, stay productive, or
-                                        buy to fool myself into thinking I’m
-                                        being productive when I’m really just
-                                        procrastinating. Here’s a big list of
-                                        all of my favorite stuff.
+                                        I get asked a lot about the things I use to build software,
+                                        stay productive, or buy to fool myself into thinking I’m
+                                        being productive when I’m really just procrastinating.
+                                        Here’s a big list of all of my favorite stuff.
                                     </p>
                                 </section>
-                                <div className="mt-6">
+                                <div className='mt-6'>
                                     <Link
-                                        href="/uses"
-                                        className="5 rounded-full bg-white px-4 py-2 font-semibold shadow dark:bg-gray-700 dark:text-white"
-                                    >
+                                        href='/uses'
+                                        className='5 rounded-full bg-white px-4 py-2 font-semibold shadow dark:bg-gray-700 dark:text-white'>
                                         Read more
                                     </Link>
                                 </div>
                             </div>
-                            <div className="mb-4">
+                            <div className='mb-4'>
                                 <PageTitle>My Articles</PageTitle>
-                                <p
-                                    className={clsx(
-                                        styles.textMuted,
-                                        'mt-2 text-xl'
-                                    )}
-                                >
-                                    Everything that is on my mind, I will write
-                                    here.
+                                <p className={clsx(styles.textMuted, 'mt-2 text-xl')}>
+                                    Everything that is on my mind, I will write here.
                                 </p>
                             </div>
-                            <div className="flex max-w-xl flex-col">
+                            <div className='flex max-w-xl flex-col'>
                                 <Articles articles={articles} />
                             </div>
                         </div>
-                        <div className="w-full lg:w-1/3">
+                        <div className='w-full lg:w-1/3'>
                             <div
                                 className={clsx(
                                     // styles.flexCenter,
 
                                     'flex items-center justify-end gap-1'
-                                )}
-                            >
-                                <span className={styles.textMuted}>
-                                    Follow me ⎯⎯⎯⎯
-                                </span>
+                                )}>
+                                <span className={styles.textMuted}>Follow me ⎯⎯⎯⎯</span>
                                 {socials.map(({ url, icon: Icon }, i) => (
                                     <Link
                                         href={url}
@@ -86,13 +68,12 @@ export default function index({ articles }) {
                                         className={clsx(
                                             styles.flexCenter,
                                             'h-8 w-8 rounded-full bg-gray-100 dark:bg-gray-800'
-                                        )}
-                                    >
-                                        <Icon stroke={1} className="h-5 w-5" />
+                                        )}>
+                                        <Icon stroke={1} className='h-5 w-5' />
                                     </Link>
                                 ))}
                             </div>
-                            <div className="mt-4">
+                            <div className='mt-4'>
                                 <ProjectAtHome />
                             </div>
                         </div>
@@ -124,7 +105,7 @@ const getSlugs = () => {
     });
 };
 
-const getPostFromSlug = (slug) => {
+const getPostFromSlug = (slug: string) => {
     const postPath = path.join(POSTS_PATH, `${slug}.mdx`);
     const source = fs.readFileSync(postPath);
     const { content, data } = matter(source);
