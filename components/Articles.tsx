@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArticleProps } from '../libs/type';
+import { ArticleProps } from '@/libs/type';
 
 export default function Articles({ articles }: { articles: ArticleProps }) {
     return (

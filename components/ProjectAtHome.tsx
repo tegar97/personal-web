@@ -35,6 +35,7 @@ const projects = [
         url: 'https://github.com/irsyadadl/react-starter',
     },
 ];
+
 export default function ProjectAtHome() {
     return (
         <div className='rounded-2xl bg-gray-100 p-6 dark:bg-gray-800/50'>
