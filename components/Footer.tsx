@@ -3,18 +3,19 @@ import Link from 'next/link';
 import React from 'react';
 import Container from './Container';
 import styles from './styles';
+import { NavLinkProps } from '@/libs/type';
 
 export default function Footer() {
     return (
-        <div className="py-8">
+        <div className='py-8'>
             <Container>
-                <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-                    <ul className="flex items-center gap-x-4">
-                        <NavLink href="/" value="Home" />
-                        <NavLink href="/about" value="About" />
-                        <NavLink href="/articles" value="Articles" />
-                        <NavLink href="/projects" value="Projects" />
-                        <NavLink href="/uses" value="Uses" />
+                <div className='flex flex-col items-center justify-between gap-4 md:flex-row'>
+                    <ul className='flex items-center gap-x-4'>
+                        <NavLink href='/' value='Home' />
+                        <NavLink href='/about' value='About' />
+                        <NavLink href='/articles' value='Articles' />
+                        <NavLink href='/projects' value='Projects' />
+                        <NavLink href='/uses' value='Uses' />
                     </ul>
                     <div className={clsx(styles.textMuted, 'text-right')}>
                         © 2022 Irsyad Notes. All rights reserved.
@@ -25,7 +26,7 @@ export default function Footer() {
     );
 }
 
-function NavLink({ href, value, children }) {
+function NavLink({ href, value, children }: NavLinkProps) {
     return (
         <li>
             <Link href={href} className={styles.textMuted}>

@@ -15,11 +15,7 @@ module.exports = {
             },
             fontFamily: {
                 sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-                mono: [
-                    'Fira Code',
-                    'Dank Mono',
-                    ...defaultTheme.fontFamily.mono,
-                ],
+                mono: ['Fira Code', 'Dank Mono', ...defaultTheme.fontFamily.mono],
             },
         },
     },

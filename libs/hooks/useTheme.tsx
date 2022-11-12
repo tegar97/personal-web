@@ -1,11 +1,10 @@
 import { useIsomorphicLayoutEffect } from '@/libs/hooks/useIsomorphicLayoutEffect';
-import { useEffect, useRef, useState } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 
-function update() {
+function update(): void {
     if (
         localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches)
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
         document.documentElement.classList.add('dark', 'changing-theme');
     } else {
@@ -16,7 +15,13 @@ function update() {
     });
 }
 
-function useTheme() {
+function useTheme(
+    system: string
+): (
+    | string
+    | React.SetStateAction<any>
+    | ((value: ((prevState: string) => string) | string) => void)
+)[] {
     let [setting, setSetting] = useState('system');
     let initial = useRef(true);
 
@@ -58,6 +63,7 @@ function useTheme() {
                 setSetting('system');
             }
         }
+
         window.addEventListener('storage', onStorage);
 
         return () => {
