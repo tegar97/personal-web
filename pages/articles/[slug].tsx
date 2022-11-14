@@ -25,6 +25,7 @@ export default function PostPage({ post }: { post: any }) {
             <Meta
                 title={`${post.meta.title} / Irsyad Notes`}
                 url={`https://irsyadnotes.com/articles/${post.meta.slug}`}
+                og={`https://irsyadnotes.com/articles/${post.meta.slug}`}
             />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
