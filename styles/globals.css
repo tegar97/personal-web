@@ -4,6 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.toc li {
+    @apply text-base;
+}
+.toc .toc-level-1 .toc-item:before {
+    /*content: '+';*/
+    content: '✓';
+    @apply mr-4 align-baseline text-yellow-500 dark:text-yellow-400;
+}
+.toc .toc-level-2 {
+    @apply !pl-8;
+}
+.toc .toc-level-2 .toc-item:before {
+    content: '⌁';
+    @apply !mr-4 align-baseline text-yellow-500 dark:text-yellow-400;
+}
+
 @layer components {
     .prose h3 a,
     .prose h3,
