@@ -25,7 +25,7 @@ export default function PostPage({ post }: { post: any }) {
             <Meta
                 title={`${post.meta.title} / Irsyad Notes`}
                 url={`https://irsyadnotes.com/articles/${post.meta.slug}`}
-                og={`https://irsyadnotes.com/articles/${post.meta.slug}`}
+                og={post.meta.og}
             />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
@@ -94,9 +94,10 @@ const getPostFromSlug = (slug: string) => {
         content,
         meta: {
             slug,
-            excerpt: data.excerpt ?? 'slug',
+            excerpt: data.excerpt ?? slug,
             title: data.title ?? slug,
             tags: data?.tags?.sort(),
+            og: data.og ?? 'https://irsyadnotes.com/images/og-image.jpg',
             date: data?.date?.toString(),
         },
     };
