@@ -23,7 +23,7 @@ const projects = [
         name: 'Laravel Ebook',
         icon: '/images/projects/books.svg',
         description: 'Learn laravel from scracth.',
-        url: 'https://parsinta.com/s/elrvl?ref=irsyadnotes.com',
+        url: 'https://parsinta.com/ebooks/belajar-laravel-lebih-dari-sekedar-fundamental',
     },
     {
         name: 'irsyadadl/libr',
