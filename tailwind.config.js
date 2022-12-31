@@ -12,6 +12,8 @@ module.exports = {
         extend: {
             colors: {
                 gray: zinc,
+                primary: '#13192b',
+                secondary: '#c8d3ee',
             },
             fontFamily: {
                 sans: ['Poppins', ...defaultTheme.fontFamily.sans],

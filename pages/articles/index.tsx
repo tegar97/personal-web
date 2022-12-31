@@ -15,7 +15,7 @@ import { ArticleProps } from '@/libs/type';
 export default function index({ articles }: { articles: ArticleProps }) {
     return (
         <>
-            <Meta title='Articles / Irsyad Notes' url={`https://irsyadnotes.com/articles`} />
+            <Meta title='Articles / Irsyad Notes' url={`http://127.0.0.1:3000/articles`} />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
                     <div className='mb-4'>

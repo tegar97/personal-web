@@ -23,8 +23,8 @@ export default function PostPage({ post }: { post: any }) {
     return (
         <>
             <Meta
-                title={`${post.meta.title} / Irsyad Notes`}
-                url={`https://irsyadnotes.com/articles/${post.meta.slug}`}
+                title={`${post.meta.title} `}
+                url={`http://127.0.0.1:3000/articles/${post.meta.slug}`}
                 og={post.meta.og}
             />
             <div className={styles.whiteLayoutWithPaddingY}>
@@ -32,7 +32,7 @@ export default function PostPage({ post }: { post: any }) {
                     <div className='relative flex gap-10'>
                         <div className='w-full lg:w-2/3'>
                             <PageTitle className='mb-6 max-w-xl pb-2'>{post.meta.title}</PageTitle>
-                            <div className='prose prose-img:rounded-lg prose-pink max-w-none prose-headings:!mb-2 prose-a:no-underline prose-pre:!rounded-2xl prose-pre:!p-6 dark:prose-invert lg:prose-lg'>
+                            <div className='prose prose-pink max-w-none prose-headings:!mb-2 prose-a:no-underline prose-pre:!rounded-2xl prose-pre:!p-6 prose-img:rounded-lg dark:prose-invert lg:prose-lg'>
                                 <MDXRemote {...post.source} components={{ Youtube, Image }} />
 
                                 <div
@@ -97,7 +97,7 @@ const getPostFromSlug = (slug: string) => {
             excerpt: data.excerpt ?? slug,
             title: data.title ?? slug,
             tags: data?.tags?.sort(),
-            og: data.og ?? 'https://irsyadnotes.com/images/og-image.jpg',
+            og: data.og ?? 'http://127.0.0.1:3000/images/og-image.jpg',
             date: data?.date?.toString(),
         },
     };

@@ -8,28 +8,23 @@ import {
 
 export const socials = [
     {
-        name: 'Twitter',
-        url: 'https://twitter.com/irsyadadl',
-        icon: IconBrandTwitter,
-    },
-    {
         name: 'Instagram',
-        url: 'https://instagram.com/irsyadadl',
+        url: 'https://www.instagram.com/akmalmuhammadtegar',
         icon: IconBrandInstagram,
     },
     {
         name: 'Github',
-        url: 'https://github.com/irsyadadl',
+        url: 'https://github.com/tegar97',
         icon: IconBrandGithub,
     },
     {
         name: 'Facebook',
-        url: 'https://facebook.com/irsyadadl',
+        url: 'https://www.facebook.com/akmal.tegar.79/',
         icon: IconBrandFacebook,
     },
     {
-        name: 'irsyad@parsinta.com',
-        url: 'mailto:irsyad@parsinta.com',
+        name: 'kakarot123456ar@gmail.com',
+        url: 'mailto:irsyad@kakarot123456a@gmail.com',
         icon: IconMail,
     },
 ];

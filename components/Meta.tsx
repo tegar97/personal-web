@@ -4,10 +4,10 @@ import { MetaProps } from '@/libs/type';
 
 export default function Meta(args: MetaProps) {
     const {
-        title = 'Irsyad A. Panjaitan',
-        description = 'There are so many questions where I currently work, from 2016 to 2 February 2022 I have worked in several PTs engaged in Software Agency and Software House.',
-        og = 'https://irsyadnotes.com/images/og-image.jpg',
-        url = 'https://irsyadnotes.com',
+        title = 'M .Tegar Akmal',
+        description = '   Holaaaa 👋, Welcome to my blog buddy , On this website, I write about my daily stuff related to software engineering. .',
+        og = 'http://127.0.0.1:3000/images/og-image.jpg',
+        url = 'http://127.0.0.1:3000/',
     } = args;
     return (
         <Head>

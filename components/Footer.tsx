@@ -12,13 +12,11 @@ export default function Footer() {
                 <div className='flex flex-col items-center justify-between gap-4 md:flex-row'>
                     <ul className='flex items-center gap-x-4'>
                         <NavLink href='/' value='Home' />
-                        <NavLink href='/about' value='About' />
                         <NavLink href='/articles' value='Articles' />
-                        <NavLink href='/projects' value='Projects' />
-                        <NavLink href='/uses' value='Uses' />
+                       
                     </ul>
                     <div className={clsx(styles.textMuted, 'text-right')}>
-                        © 2022 Irsyad Notes. All rights reserved.
+                        © 2022 Tegar. All rights reserved.
                     </div>
                 </div>
             </Container>

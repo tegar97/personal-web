@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 export default function Navbar() {
     return (
-        <div className='flex items-center justify-center px-4 md:justify-between'>
+        <div className='flex items-center justify-center px-4 md:justify-between sticky'>
             <Link href='/' className='hidden cursor-pointer sm:block'>
                 <Image
                     className='h-8 w-8 rounded-full'

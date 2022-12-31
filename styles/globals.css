@@ -5,11 +5,12 @@
 @tailwind utilities;
 
 .toc li {
-    @apply text-base;
+    @apply dark:text-primary  ;
+
 }
 .toc .toc-level-1 .toc-item:before {
     /*content: '+';*/
-    content: '✓';
+    content: '+';
     @apply mr-4 align-baseline text-yellow-500 dark:text-yellow-400;
 }
 .toc .toc-level-2 {
@@ -19,17 +20,26 @@
     content: '⌁';
     @apply !mr-4 align-baseline text-yellow-500 dark:text-yellow-400;
 }
+.prose-pink {
+    --tw-prose-links: #fff !important; 
+    --tw-prose-invert-links: #ec4899;
+}
 
 @layer components {
     .prose h3 a,
     .prose h3,
     .prose h4,
     .prose h2 {
-        @apply mb-1 scroll-mt-4 bg-gradient-to-tr from-orange-500 via-pink-500 to-rose-500 bg-clip-text font-bold text-transparent;
+        @apply mb-1 scroll-mt-4 bg-gradient-to-tr from-[#90b0ff] via-blue-500 to-blue-100  bg-clip-text font-bold text-transparent;
     }
-
+    p{
+         @apply text-gray-500 dark:text-secondary;
+    }
+    .toc-link .toc-link-h3{
+            @apply text-gray-500 dark:text-secondary;
+    }
     .prose .toc {
-        @apply rounded-lg border bg-zinc-100 px-6 dark:border-zinc-800 dark:bg-black/50;
+        @apply rounded-lg border bg-zinc-100 px-6 dark:border-[#1a1c32] dark:bg-[#1a1c32] ;
     }
     .prose .toc ol {
         @apply list-none pl-0;
@@ -40,11 +50,11 @@
     }
 
     .text-gradient {
-        @apply bg-gradient-to-tr from-orange-500 via-pink-500 to-rose-500 bg-clip-text text-transparent;
+        @apply bg-gradient-to-tr from-[#90b0ff] via-blue-500 to-blue-100 bg-clip-text text-transparent;
     }
 
     .text-muted {
-        @apply text-gray-500 dark:text-gray-400;
+        @apply text-gray-500 dark:text-[#c8d3ee];
     }
 
     .text-inverted {

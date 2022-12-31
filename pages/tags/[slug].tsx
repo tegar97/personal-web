@@ -13,7 +13,7 @@ import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 export default function TagPage({ slug, articles }: { slug: string; articles: ArticleProps }) {
     return (
         <>
-            <Meta title={`${slug} / Irsyad Notes`} url={`https://irsyadnotes.com/articles`} />
+            <Meta title={`${slug} s`} url={`http://127.0.0.1:3000/articles`} />
             <div className='bg-white'>
                 <Container>
                     <h1>Tag: {slug}</h1>
