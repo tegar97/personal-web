@@ -21,7 +21,7 @@ export default function index({ articles }: { articles: ArticleProps }) {
     console.log(articles)
     return (
         <>
-            <Meta title='Irsyad Notes' url={`http://127.0.0.1:3000/articles`} />
+            <Meta title='Tegar blog' url={`http://127.0.0.1:3000/articles`} />
             <div className={styles.whiteLayoutWithPaddingY}>
                 <Container>
                     <div className='mb-10 flex flex-col  gap-5 lg:gap-10'>
