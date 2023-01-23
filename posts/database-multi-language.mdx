@@ -1,0 +1,94 @@
+---
+title: Database Multi Language
+tags:
+    - Sql
+date: 2023-01-23
+excerpt: When we are going to build an application that targets users from many countries, our application also needs to support the feature of language change
+---
+
+When we are going to build an application that targets users from many countries, our application also needs to support the feature of language change
+
+For example, in the case of the categories feature of an online store, we want to build a website that, when accessed from the united states, display categories in English, and when accessed from Indonesia, display categories in the Indonesian language
+
+### Tabel Schema
+
+<Image
+    width='1280'
+    height='720'
+    alt='Screenshot of the project'
+    src={'https://is3.cloudhost.id/tegar/trd-categories.png'}
+/>
+
+We will create two tables: the "categories" table and the "categories translation" table.
+
+-   The "categories" table stores general information about categories. "Category_id" is set as the primary key, which means that every row in the "categories" table must be unique.
+
+-   "category_id" in the "categoriesTranslations" table is set as the primary key and foreign key, which means that every row in the "categoriesTranslations" table must refer to a corresponding row in the "categories" table. This ensures that every translation stored in the "categoriesTranslations" table is correctly linked to a specified category.
+
+-   "language" in the "categoriesTranslations" table is set as primary key, it means that every row in the "categoriesTranslations" table must be uniquely identified by the combination of "category_id" and "language". This means that there can't be two rows that have the same "category_id" and the same "language". This ensures that each row in the table is unique and there is no duplication of the data. This is useful because it makes sure that the language and the category is unique and you can retrieve the correct data when you want to display it
+
+The relationship between the "categories" table and the "categoriesTranslations" table is a one-to-many (1:N) relationship. This means that every row in the "categories" table can have multiple translations in the "categoriesTranslations" table, but every row in the "categoriesTranslations" table can only reference one row in the "categories" table. This relationship is established by using the "category_id" column in the "categoriesTranslations" table as a foreign key that references the primary key of the "categories" table. This relationship ensures that each category has multiple translations in the "categoriesTranslations" table, and each translation in the "categoriesTranslations" table corresponds to a single category in the "categories" table.
+
+### Sql implementation
+
+Create the "categories" table
+
+```sql
+CREATE TABLE categories
+(
+    id       VARCHAR(100),
+    position INT,
+    PRIMARY KEY (id)
+) ENGINE InnoDB;
+```
+
+Create the "categories_translations" table
+
+```sql
+CREATE TABLE categories_translations
+(
+    category_id VARCHAR(100) NOT NULL,
+    language    VARCHAR(100) NOT NULL,
+     name        VARCHAR(100) NOT NULL,
+    description TEXT,
+    PRIMARY KEY (category_id, language)
+) ENGINE InnoDB;
+
+```
+
+Add Foreign key in categories_translations table to categories table
+
+``` sql
+ALTER TABLE categories_translations ADD CONSTRAINT fk_categories_translation FOREIGN KEY (category_id) REFERENCES categories (id);
+```
+
+### Testing
+
+Let's test the database that has been created, we assume that we have 'Food' category data in 2 languages (Indonesian and English)
+
+Insert to categories table
+
+```sql
+INSERT INTO categories(id, position)
+VALUES ('FOOD', 1);
+```
+Insert to categories_translations table
+
+```sql
+    
+INSERT INTO categories_translations(category_id, language, name, description)
+VALUES ('FOOD', 'in_ID', 'Makanan', 'Deskripsi Makanan');
+```
+
+```sql
+INSERT INTO categories_translations(category_id, language, name, description)
+VALUES ('FOOD', 'en_US', 'Food', 'Food Description');
+
+```
+
+Select data 
+```sql
+SELECT * FROM categories
+    JOIN categories_translations ct on categories.id = ct.category_id
+WHERE ct.language = 'en_US' ORDER BY position;
+```
