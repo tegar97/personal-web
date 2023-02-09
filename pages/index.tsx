@@ -45,8 +45,13 @@ export default function index({ articles }: { articles: ArticleProps }) {
                         </div>
                         <p>
                             {' '}
-                            Holaaaa 👋, Welcome to my blog buddy , On this
-                            website, I write about my daily stuff related to software engineering. .
+                            Holaaaa 👋, Welcome to my blog buddy. On this website, now i am study in
+                            computer science at{' '}
+                            <a href='https://www.itenas.ac.id/'>
+                                institut teknologi nasional bandung
+                            </a>
+                            .On this website, I write about my daily stuff related to software
+                            engineering
                         </p>
                         <div className='mt-2 flex flex-row gap-5'>
                             {socials.map(({ name, url, icon: Icon }, i) => (
