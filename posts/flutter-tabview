@@ -1,0 +1,139 @@
+---
+title: Creating a Tabbed Interface in Flutter with TabBar and TabBarView
+tags:
+    - Flutter
+date: 2023-01-23
+excerpt: When we are going to build an application that targets users from many countries, our application also needs to support the feature of language change
+---
+# Creating a Tabbed Interface in Flutter with TabBar and TabBarView
+
+In Flutter, creating a tabbed interface is a powerful way to organize content and provide users with an intuitive navigation experience. With the TabBar and TabBarView widgets, you can easily implement a tab-based layout that allows users to switch between different sections of your app. In this article, we'll explore how to create a tabbed interface using the provided code below as an example.
+
+```dart
+import 'package:flutter/material.dart';
+
+class ExampleScreen extends StatefulWidget {
+  const ExampleScreen({Key? key}) : super(key: key);
+
+  @override
+  _ExampleScreenState createState() => _ExampleScreenState();
+}
+
+class _ExampleScreenState extends State<ExampleScreen>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController =
+        TabController(length: 4, vsync: this); // Set the number of tabs here
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Tabbed Interface Example'),
+      ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              // TabBar widget to display the tabs
+              TabBar(
+                controller: _tabController,
+                isScrollable: true,
+                indicatorColor: Colors.blue, // Customize the indicator color
+                labelColor: Colors.blue, // Customize the selected tab label color
+                unselectedLabelColor: Color(0xff15181F), // Customize the unselected tab label color
+                tabs: [
+                  // Tabs to switch between content sections
+                  Tab(
+                    child: Text(
+                      "Tab 1",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Tab 2",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Tab 3",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Tab 4",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  // Add more tabs if needed
+                ],
+              ),
+              SizedBox(height: 16),
+              Expanded(
+                child: TabBarView(
+                  controller: _tabController,
+                  children: [
+                    // Content of Tab 1
+                    Center(
+                      child: Text(
+                        "Menu 1",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ),
+                    // Content of Tab 2
+                    Center(
+                      child: Text(
+                        "Menu 2",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ),
+                    Center(
+                      child: Text(
+                        "Menu 3",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ),
+                    Center(
+                      child: Text(
+                        "Menu 4",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+Explanation:
+
+- In this example, we create a StatefulWidget called ExampleScreen, which holds the tabbed interface. The TabController is used to manage the state of the tabs and content views.
+- TabBar: The TabBar widget displays the tabs at the top of the screen. It takes a TabController to handle tab navigation. We customize the appearance of the tabs using properties like isScrollable, indicatorColor, labelColor, and unselectedLabelColor. The tabs property contains a list of Tab widgets, each representing a tab item.
+- TabBarView: The TabBarView widget contains the content for each tab. It also uses the same TabController as the TabBar to sync the content with the selected tab. The children property contains a list of widgets representing the content for each tab.
+- In this example, we have four tabs: "Tab 1," "Tab 2," "Tab 3," and "Tab 4," and each tab displays different content when selected.
+
+Implementing a tabbed interface in Flutter is a great way to organize your app's content and enhance user experience. You can further customize the appearance and behavior of the tabs to match your app's design. With this knowledge, you can now create more interactive and organized user interfaces for your Flutter applications. Happy coding!
